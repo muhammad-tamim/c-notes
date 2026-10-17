@@ -2,26 +2,28 @@
 
 - [1. Part 1: Language](#1-part-1-language)
   - [1.1. Chapter 1: Basic Syntax, Variables and Data Types:](#11-chapter-1-basic-syntax-variables-and-data-types)
-    - [1.1.3. First C Program:](#113-first-c-program)
-    - [1.1.4. Comments:](#114-comments)
-    - [1.1.5. Data Types and Variables:](#115-data-types-and-variables)
-    - [1.1.6. Data Types Limitations:](#116-data-types-limitations)
-    - [1.1.7. How to Take Input:](#117-how-to-take-input)
-    - [1.1.8. Pre and Post Increment/Decrement:](#118-pre-and-post-incrementdecrement)
-    - [1.1.9. Operator Precedence:](#119-operator-precedence)
-    - [Escape sequence:](#escape-sequence)
+    - [1.1.1. First C Program:](#111-first-c-program)
+    - [1.1.2. Comments:](#112-comments)
+    - [1.1.3. Data Types and Variables:](#113-data-types-and-variables)
+    - [1.1.4. Data Types Limitations:](#114-data-types-limitations)
+    - [1.1.5. How to Take Input:](#115-how-to-take-input)
+    - [1.1.6. Difference Between Pre and Post:](#116-difference-between-pre-and-post)
+    - [1.1.7. Operator Precedence:](#117-operator-precedence)
+    - [1.1.8. Escape sequence:](#118-escape-sequence)
   - [1.2. Chapter 2: Operators and Conditional Statement(if-else):](#12-chapter-2-operators-and-conditional-statementif-else)
-    - [1.2.1. Arithmetic Operators(+, -, \*, /, %):](#121-arithmetic-operators-----)
-    - [1.2.2. Relational Operators(\>, \<, \>=, \<=, ==, !=):](#122-relational-operators-----)
-    - [1.2.3. Logical Operators(\&\&, ||, !):](#123-logical-operators--)
-    - [1.2.4. If-Else:](#124-if-else)
-    - [1.2.5. If-Else Ladder:](#125-if-else-ladder)
-    - [1.2.6. Nested If-Else:](#126-nested-if-else)
+    - [1.2.1. Operators:](#121-operators)
+      - [1.2.1.1. Arithmetic Operators(+, -, \*, /, %):](#1211-arithmetic-operators-----)
+      - [1.2.1.2. Relational Operators(\>, \<, \>=, \<=, ==, !=):](#1212-relational-operators-----)
+      - [1.2.1.3. Logical Operators(\&\&, ||, !):](#1213-logical-operators--)
+    - [1.2.2. Conditional Statement:](#122-conditional-statement)
+      - [1.2.2.1. If-Else:](#1221-if-else)
+      - [1.2.2.2. If-Else Ladder:](#1222-if-else-ladder)
+      - [1.2.2.3. Nested If-Else:](#1223-nested-if-else)
   - [1.3. Chapter 3: Loop:](#13-chapter-3-loop)
     - [1.3.1. For-Loop:](#131-for-loop)
-    - [1.3.2. Break Statement:](#132-break-statement)
-    - [1.3.3. Continue Statement:](#133-continue-statement)
-    - [1.3.4. While and Do-While Loop:](#134-while-and-do-while-loop)
+    - [1.3.2. While Loop:](#132-while-loop)
+    - [1.3.3. Do-While Loop:](#133-do-while-loop)
+    - [1.3.4. Break and Continue Statement:](#134-break-and-continue-statement)
     - [1.3.5. Nested Loop:](#135-nested-loop)
   - [1.4. Chapter 4: Array:](#14-chapter-4-array)
     - [1.4.1. What is Array:](#141-what-is-array)
@@ -74,7 +76,7 @@
 
 # 1. Part 1: Language
 ## 1.1. Chapter 1: Basic Syntax, Variables and Data Types:
-### 1.1.3. First C Program: 
+### 1.1.1. First C Program: 
 
 ```c
 #include <stdio.h> 
@@ -95,7 +97,7 @@ Behind the Code:
   - `printf("Hello World");`: printf() function is used to display output on the screen. Its comes from `<stdio.h>` library.
   - `return 0;`: return sends a value back from the function and 0 in the main function usually means the program finished successfully. 
 
-### 1.1.4. Comments:
+### 1.1.2. Comments:
 
 ```c
 #include <stdio.h> 
@@ -113,7 +115,7 @@ int main()
 } 
 ```
 
-### 1.1.5. Data Types and Variables:
+### 1.1.3. Data Types and Variables:
 - Data Types: 
 A data type defines what kind of data a variable can store.
 
@@ -162,13 +164,21 @@ int main() {
 }
 ```
 
-### 1.1.6. Data Types Limitations:
+### 1.1.4. Data Types Limitations:
 
-- Int = 4 bytes = 32 bits = 2^32 = 4,294,967,296 = −2,147,483,648 to 2,147,483,647 = 10^9 = it allows up to approximately 10 digits 
-- long long int = 8 bytes = 64 bits = 2^64 = 18,446,744,073,709,551,616 = -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 = 10^18 = it allows up to approximately 19 digits 
-- float = 4 bytes = 32 bits = 10^6 = it allows up to approximately 7 digits precision (1.123456 = 7 digits) 
-- double = 8 bytes = 64 bits = 10^14 = it allows up to approximately 15 digits precision (1.12345678912345 = 15 digits)
-- char = 1 byte = 8 bits = 2^8 = 256 = -128 to 127 (65 = A, 90 = Z, 97 = a, 122 = z) 
+Easy To Remember: 
+- Int = `10^9` = `it allows up to approximately 10 digits` 
+- long long int = `10^18` = `it allows up to approximately 19 digits`
+- float = `10^6` = `it allows up to approximately 7 digits precision (1.123456 = 7 digits)`
+- double = `10^14` = `it allows up to approximately 15 digits precision (1.12345678912345 = 15 digits)`
+- char = `-128 to 127 (65 = A, 90 = Z, 97 = a, 122 = z)`
+
+Full Explanation:
+- Int = 4 bytes = 32 bits = 2^32 = 4,294,967,296 = −2,147,483,648 to 2,147,483,647 = `10^9` = `it allows up to approximately 10 digits` 
+- long long int = 8 bytes = 64 bits = 2^64 = 18,446,744,073,709,551,616 = -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 = `10^18` = `it allows up to approximately 19 digits`
+- float = 4 bytes = 32 bits = `10^6` = `it allows up to approximately 7 digits precision (1.123456 = 7 digits)` 
+- double = 8 bytes = 64 bits = `10^14` = `it allows up to approximately 15 digits precision (1.12345678912345 = 15 digits)`
+- char = 1 byte = 8 bits = `2^8` = `256` = `-128 to 127 (65 = A, 90 = Z, 97 = a, 122 = z)` 
 
 ```c
 #include <stdio.h>
@@ -177,9 +187,6 @@ int main() {
 
 int main(void)
 {
-    printf("char: %zu bytes, range %d to %d\n",
-           sizeof(char), CHAR_MIN, CHAR_MAX); // char: 1 bytes, range -128 to 127
-
     printf("int: %zu bytes, range %d to %d\n",
            sizeof(int), INT_MIN, INT_MAX); // int: 4 bytes, range -2147483648 to 2147483647
 
@@ -192,6 +199,9 @@ int main(void)
     printf("double: %zu bytes, range %e to %e\n",
            sizeof(double), -DBL_MAX, DBL_MAX); // double: 8 bytes, range -1.797693e+308 to 1.797693e+308
 
+    printf("char: %zu bytes, range %d to %d\n",
+           sizeof(char), CHAR_MIN, CHAR_MAX); // char: 1 bytes, range -128 to 127
+ 
     return 0;
 }
 ```
@@ -204,7 +214,7 @@ Note:
 - 1024 MB = 1GB
 - 1024 GB = 1 TB
 
-### 1.1.7. How to Take Input:
+### 1.1.5. How to Take Input:
 
 ```c
 #include <stdio.h>
@@ -227,7 +237,30 @@ int main()
 }
 ```
 
-Note: We can also use `getchar()` and `putchar()` functions to take input and output for single character only.
+Alternatively, We can also use `getchar()` and `putchar()` functions to take input and output for single character only.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    printf("%c\n", getchar());
+
+    return 0;
+}
+```
+
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    putchar(getchar()); 
+
+    return 0;
+}
+```
 
 ```c
 #include <stdio.h>
@@ -235,17 +268,18 @@ int main()
 {
     char myChar;
     myChar = getchar();
-    putchar(myChar); // Output the character read from input
+    putchar(myChar);
 
     return 0;
 }
 ```
 
-Note: 
-- We cannot directly call the `getchar()` function. Instead, we must assign the `getchar()` function to a variable. 
-- We are not allowed to add any additional text inside the `putchar()` function and The `putchar()` function must strictly be used to print a single character.
+### 1.1.6. Difference Between Pre and Post:
+`Pre-increment (++i):` First increments the value of i, then assigns it.
 
-### 1.1.8. Pre and Post Increment/Decrement:
+`Post-increment (i++):` First assigns the value, then increments i.
+
+
 - Pre: 
 ```c
 #include <stdio.h>
@@ -279,12 +313,7 @@ int main(){
 
 Note: First, the value of i (which is 10) is assigned to the variable x. After that, i is incremented, so i becomes 11.
 
-Note: 
-Pre-increment (++i): First increments the value of i, then assigns it.
-Post-increment (i++): First assigns the value, then increments i.
-
-
-### 1.1.9. Operator Precedence:
+### 1.1.7. Operator Precedence:
 ![alt text](./images/operator-precedence.png)
 
 ```
@@ -297,7 +326,7 @@ int result = 10 + 5 - 2 / 2 * 3;
 Final result = 12
 ```
 
-### Escape sequence:
+### 1.1.8. Escape sequence:
 An escape sequence is a special character combination that starts with a backslash `\` and represents a character or action that is difficult to write directly in the printf function.
 
 | Escape Sequence | Meaning | Example Output |
@@ -351,19 +380,578 @@ int main()
 ![alt text](./images/escape-sequence-output.png)
 
 ## 1.2. Chapter 2: Operators and Conditional Statement(if-else):
-### 1.2.1. Arithmetic Operators(+, -, *, /, %):
-### 1.2.2. Relational Operators(>, <, >=, <=, ==, !=):
-### 1.2.3. Logical Operators(&&, ||, !):
-### 1.2.4. If-Else:
-### 1.2.5. If-Else Ladder:
-### 1.2.6. Nested If-Else:
+### 1.2.1. Operators: 
+#### 1.2.1.1. Arithmetic Operators(+, -, *, /, %):
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 3;
+
+    printf("Addition: %d\n", a + b); // Addition: 13
+    printf("Subtraction: %d\n", a - b); // Subtraction: 7
+    printf("Multiplication: %d\n", a * b); // Multiplication: 30
+    printf("Division: %d\n", a / b); // Division: 3 
+    printf("Modulus: %d\n", a % b); // Modulus: 1 
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+int main()
+{
+    int a = 7;
+    int b = 2;
+
+    int quotient = a / b;
+    int remainder = a % b;
+
+    printf("%d / %d = %d\n", a, b, quotient);
+    printf("%d %% %d = %d\n", a, b, remainder);
+
+    return 0;
+}
+```
+
+![alt text](./images/ARETHMETIC-OPERATOR-OUTPTU.png)
+![alt text](./images/divistion.png)
+
+#### 1.2.1.2. Relational Operators(>, <, >=, <=, ==, !=):
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 5;
+
+    printf("Greater than: %d\n", a > b); // Greater than: 1 
+    printf("Less than: %d\n", a < b); // Less than: 0
+    printf("Greater than or equal to: %d\n", a >= b); // Greater than or equal to: 1
+    printf("Less than or equal to: %d\n", a <= b); // Less than or equal to: 0
+    printf("Equal to: %d\n", a == b); // Equal to: 0
+    printf("Not equal to: %d\n", a != b); // Not equal to: 1
+
+    return 0;
+}
+```
+
+#### 1.2.1.3. Logical Operators(&&, ||, !):
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 5;
+
+    printf("Logical AND: %d\n", (a > 5) && (b < 10)); // Logical AND: 1
+    printf("Logical OR: %d\n", (a < 5) || (b < 10)); // Logical OR: 1
+    printf("Logical NOT: %d\n", !(a > 5)); // Logical NOT: 0
+
+    return 0;
+}
+```
+
+Note: For logical not operator, if the condition is true then it will return false(0) and if the condition is false then it will return true(1).
+
+```c
+#include <stdio.h>
+int main()
+{
+    int x = 5; // x = true
+    if (!x)
+        printf("X is zero\n");
+    else
+        printf("X is not zero\n"); // X is not zero
+
+    x = 0; // x = false
+    if (!x)
+        printf("X is zero\n"); // X is zero
+    else
+        printf("X is not zero");
+
+    return 0;
+}
+```
+
+### 1.2.2. Conditional Statement: 
+#### 1.2.2.1. If-Else:
+- syntax:
+
+```c
+If(condition == true){
+	Statement 1;
+}
+Else{
+	Statement 2;
+}
+```
+#### 1.2.2.2. If-Else Ladder:
+- Syntax:
+
+```c
+If(condition == ture){
+	Statement 1;
+}
+Else if(condition == ture){
+	Statement 2;
+}
+Else if(condition == ture){
+	Statemtn 3;
+}
+Else{
+	Statement 4;
+}
+```
+
+#### 1.2.2.3. Nested If-Else:
+
+- Syntax:
+
+```c
+If(condition == ture){
+	Statement 1;
+	If(condition == ture){
+		Statement 2;
+	}
+	Else{
+		Statement 3;
+	}
+}
+Else{
+	Statement 4;
+}
+```
 
 ## 1.3. Chapter 3: Loop: 
 ### 1.3.1. For-Loop:
-### 1.3.2. Break Statement:
-### 1.3.3. Continue Statement:
-### 1.3.4. While and Do-While Loop:
+
+- Syntax:
+```c
+for(initialization; condition; increment/decrement) {
+			Statement;
+		}
+```
+
+- Examples: 
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 3; i++)
+    /*
+        i += 1;
+        i =  i + 1;
+    */
+    {
+        printf("I am Sorry\n", i);
+    }
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 3; i++)
+    {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+```
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 20; i = i + 2)
+    {
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+```
+
+```c
+// Sum Form 1 to N
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    int sum = n * (n + 1) / 2;
+
+    printf("%d", sum);
+
+    return 0;
+}
+
+// or
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int sum = 0;
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+        // sum = sum + i;
+    }
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d = even\n", i);
+        }
+        else
+        {
+            printf("%d = odd\n", i);
+        }
+    }
+
+    return 0;
+}
+```
+
+### 1.3.2. While Loop: 
+- Syntax: 
+```c
+Initialization;
+
+While(condition){
+  Statement;
+  Increment/decrement;
+}
+```
+
+- Example: 
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 1;
+    while (i <= 10)
+    {
+        printf("%d ", i);
+        i++;
+    }
+
+    return 0;
+}
+```
+
+### 1.3.3. Do-While Loop:
+- Syntax:
+```c
+Initialization;
+do{
+	Statement;
+	Increment/ decrement;
+}
+While(condition);
+```
+
+- Example: 
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 1;
+    do
+    {
+        printf("%d ", i);
+        i++;
+    } while (i <= 10);
+
+    return 0;
+}
+```
+
+### 1.3.4. Break and Continue Statement:
+Note:
+- Break = Stop
+- Continue = Skip
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i == 5)
+        {
+            break;
+        }
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i == 5)
+        {
+            continue;
+        }
+        printf("%d ", i);
+    }
+
+    return 0;
+}
+```
+
 ### 1.3.5. Nested Loop:
+
+Nested loop = A loop inside another loop.
+
+- Pattern 1:
+
+![alt text](./images/pattern-1.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+        return 0;
+}
+``` 
+
+![alt text](./images/pattern-1-image-2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = n; j > i; j--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
+
+- Pattern 2:
+
+![alt text](./images/pattern-2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("%d", j + 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/pattern-2-output-2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("%d", j + 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+- Pattern 3:
+
+![alt text](./images/pattern-3.png)
+![alt text](./images/pattern-3-output-1.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int space, star;
+    space = n - 1;
+    star = 1;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < space; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < star; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        space--;
+        star += 2;
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/pattern-3-explanation-2.png)
+![alt text](./images/pattern-3-output-2.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int space, star;
+    star = n * 2 - 1;
+    space = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < space; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < star; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        space++;
+        star -= 2;
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/pattern-3-explanation-3.png)
+![alt text](./images/pattern-3-output-3.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int space, star;
+    space = n - 1;
+    star = 1;
+
+    for (int i = 0; i < n * 2 - 1; i++)
+    {
+        for (int j = 0; j < space; j++)
+        {
+            printf(" ");
+        }
+        for (int j = 0; j < star; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+        if (i < n - 1)
+        {
+            space--;
+            star += 2;
+        }
+        else
+        {
+            space++;
+            star -= 2;
+        }
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/pattern-3-explantion-3.2.png)
 
 ## 1.4. Chapter 4: Array:
 ### 1.4.1. What is Array:
