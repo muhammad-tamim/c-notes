@@ -420,6 +420,10 @@ int main()
 
 ![alt text](./images/ARETHMETIC-OPERATOR-OUTPTU.png)
 ![alt text](./images/divistion.png)
+- Dividend = 7 (যাকে ভাগ করা হবে)
+- Divisor = ২ (যা দিয়ে ভাগ করা হবে)
+- Quotient = 3 (ভাগফল)
+- Remainder = 1 (ভাগশেষ)
 
 #### 1.2.1.2. Relational Operators(>, <, >=, <=, ==, !=):
 
@@ -480,6 +484,8 @@ int main()
 
     return 0;
 }
+
+// note: Any value other than 0 is considered true, and 0 is considered false.
 ```
 
 ### 1.2.2. Conditional Statement: 
@@ -534,111 +540,22 @@ Else{
 ## 1.3. Chapter 3: Loop: 
 ### 1.3.1. For-Loop:
 
-- Syntax:
 ```c
 for(initialization; condition; increment/decrement) {
-			Statement;
-		}
+	Statement;
+}
 ```
-
-- Examples: 
 
 ```c
 #include <stdio.h>
 
-int main()
-{
-    for (int i = 1; i <= 3; i++)
-    /*
+int main(){
+    for(int i = 1; i <= 5; i++){
+        /*
         i += 1;
-        i =  i + 1;
-    */
-    {
-        printf("I am Sorry\n", i);
-    }
-
-    return 0;
-}
-```
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    for (int i = 1; i <= 3; i++)
-    {
-        printf("%d\n", i);
-    }
-
-    return 0;
-}
-```
-```c
-#include <stdio.h>
-
-int main()
-{
-    for (int i = 1; i <= 20; i = i + 2)
-    {
-        printf("%d\n", i);
-    }
-
-    return 0;
-}
-```
-
-```c
-// Sum Form 1 to N
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-
-    int sum = n * (n + 1) / 2;
-
-    printf("%d", sum);
-
-    return 0;
-}
-
-// or
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int sum = 0;
-
-    for (int i = 1; i <= n; i++)
-    {
-        sum += i;
-        // sum = sum + i;
-    }
-    printf("%d", sum);
-
-    return 0;
-}
-```
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    for (int i = 1; i <= 10; i++)
-    {
-        if (i % 2 == 0)
-        {
-            printf("%d = even\n", i);
-        }
-        else
-        {
-            printf("%d = odd\n", i);
-        }
+        i = i + 1; 
+        */ 
+        printf("%d ", i); // 1 2 3 4 5
     }
 
     return 0;
@@ -646,7 +563,6 @@ int main()
 ```
 
 ### 1.3.2. While Loop: 
-- Syntax: 
 ```c
 Initialization;
 
@@ -656,17 +572,15 @@ While(condition){
 }
 ```
 
-- Example: 
-
 ```c
 #include <stdio.h>
 
 int main()
 {
     int i = 1;
-    while (i <= 10)
+    while (i <= 5)
     {
-        printf("%d ", i);
+        printf("%d ", i); // 1 2 3 4 5  
         i++;
     }
 
@@ -675,7 +589,6 @@ int main()
 ```
 
 ### 1.3.3. Do-While Loop:
-- Syntax:
 ```c
 Initialization;
 do{
@@ -685,7 +598,6 @@ do{
 While(condition);
 ```
 
-- Example: 
 ```c
 #include <stdio.h>
 
@@ -694,9 +606,9 @@ int main()
     int i = 1;
     do
     {
-        printf("%d ", i);
+        printf("%d ", i); // 1 2 3 4 5
         i++;
-    } while (i <= 10);
+    } while (i <= 5);
 
     return 0;
 }
@@ -714,12 +626,12 @@ int main()
 {
     for (int i = 1; i <= 10; i++)
     {
-        if (i == 5)
+        if (i == 6)
         {
             break;
         }
-        printf("%d ", i);
-    }
+        printf("%d ", i); // 1 2 3 4 5
+    } 
 
     return 0;
 }
@@ -730,13 +642,13 @@ int main()
 
 int main()
 {
-    for (int i = 1; i <= 10; i++)
+    for (int i = 1; i <= 5; i++)
     {
-        if (i == 5)
+        if (i == 3)
         {
             continue;
         }
-        printf("%d ", i);
+        printf("%d ", i); // 1 2 4 5
     }
 
     return 0;
@@ -745,11 +657,22 @@ int main()
 
 ### 1.3.5. Nested Loop:
 
-Nested loop = A loop inside another loop.
+Nested loop = loop inside another loop.
 
-- Pattern 1:
+- Syntax: 
 
-![alt text](./images/pattern-1.png)
+```c
+for(initialization; condition; increment/decrement) {
+    for(initialization; condition; increment/decrement) {
+        Statement;
+        for(initialization; condition; increment/decrement) {
+            Statement;
+            ........................
+            ........................
+        }
+    }
+}
+```
 
 ```c
 #include <stdio.h>
@@ -770,188 +693,8 @@ int main()
 
         return 0;
 }
-``` 
-
-![alt text](./images/pattern-1-image-2.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = n; j > i; j--)
-        {
-            printf("*");
-        }
-        printf("\n");
-    }
-    return 0;
-}
 ```
-
-- Pattern 2:
-
-![alt text](./images/pattern-2.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j <= i; j++)
-        {
-            printf("%d", j + 1);
-        }
-        printf("\n");
-    }
-
-    return 0;
-}
-```
-
-![alt text](./images/pattern-2-output-2.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-
-    for (int i = n; i > 0; i--)
-    {
-        for (int j = 0; j < i; j++)
-        {
-            printf("%d", j + 1);
-        }
-        printf("\n");
-    }
-
-    return 0;
-}
-```
-
-- Pattern 3:
-
-![alt text](./images/pattern-3.png)
-![alt text](./images/pattern-3-output-1.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int space, star;
-    space = n - 1;
-    star = 1;
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < space; j++)
-        {
-            printf(" ");
-        }
-        for (int j = 0; j < star; j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-        space--;
-        star += 2;
-    }
-
-    return 0;
-}
-```
-
-![alt text](./images/pattern-3-explanation-2.png)
-![alt text](./images/pattern-3-output-2.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int space, star;
-    star = n * 2 - 1;
-    space = 0;
-
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < space; j++)
-        {
-            printf(" ");
-        }
-        for (int j = 0; j < star; j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-        space++;
-        star -= 2;
-    }
-
-    return 0;
-}
-```
-
-![alt text](./images/pattern-3-explanation-3.png)
-![alt text](./images/pattern-3-output-3.png)
-
-```c
-#include <stdio.h>
-
-int main()
-{
-    int n;
-    scanf("%d", &n);
-    int space, star;
-    space = n - 1;
-    star = 1;
-
-    for (int i = 0; i < n * 2 - 1; i++)
-    {
-        for (int j = 0; j < space; j++)
-        {
-            printf(" ");
-        }
-        for (int j = 0; j < star; j++)
-        {
-            printf("*");
-        }
-        printf("\n");
-        if (i < n - 1)
-        {
-            space--;
-            star += 2;
-        }
-        else
-        {
-            space++;
-            star -= 2;
-        }
-    }
-
-    return 0;
-}
-```
-
-![alt text](./images/pattern-3-explantion-3.2.png)
+![alt text](./images/pattern-1.png)
 
 ## 1.4. Chapter 4: Array:
 ### 1.4.1. What is Array:
