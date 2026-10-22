@@ -32,11 +32,8 @@
     - [1.4.4. Remove Element from an Array:](#144-remove-element-from-an-array)
     - [1.4.5. Array Concatenation:](#145-array-concatenation)
   - [1.5. Chapter 5: 2D Array:](#15-chapter-5-2d-array)
-    - [1.5.1. What is 2D Array:](#151-what-is-2d-array)
-    - [1.5.2. 2D Array Input and Output:](#152-2d-array-input-and-output)
-    - [1.5.3. How to Print Specific Row and Column in 2D Array:](#153-how-to-print-specific-row-and-column-in-2d-array)
-    - [1.5.4. Different types of Matrix:](#154-different-types-of-matrix)
-  - [1.6. chapter 6: Introduction to String:](#16-chapter-6-introduction-to-string)
+    - [1.5.1. 2D Array Input and Output:](#151-2d-array-input-and-output)
+  - [1.6. chapter 6: String:](#16-chapter-6-string)
     - [1.6.1. What is String:](#161-what-is-string)
     - [1.6.2. String Input and Output:](#162-string-input-and-output)
     - [1.6.3. Length of a String:](#163-length-of-a-string)
@@ -991,12 +988,75 @@ int main()
 ![alt text](./images/array11.png)
 
 ## 1.5. Chapter 5: 2D Array:
-### 1.5.1. What is 2D Array:
-### 1.5.2. 2D Array Input and Output:
-### 1.5.3. How to Print Specific Row and Column in 2D Array:
-### 1.5.4. Different types of Matrix:
+A 2D array (two-dimensional array) is an array that stores elements in rows and columns, like a table or a matrix. 
 
-## 1.6. chapter 6: Introduction to String:
+Syntax:
+```c
+data_type array_name[rows][columns];
+```
+
+```c
+#include <stdio.h>
+int main()
+{
+    int arr[3][2] = {
+        {1, 2}, 
+        {3, 4}, 
+        {5, 6}
+    }; // 3 rows and 2 columns
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/2d-array.png)
+
+### 1.5.1. 2D Array Input and Output:
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int row, col;
+    scanf("%d %d", &row, &col);
+
+    int arr[row][col];
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/2d-array2.png)
+
+
+## 1.6. chapter 6: String:
 ### 1.6.1. What is String:
 ### 1.6.2. String Input and Output:
 ### 1.6.3. Length of a String:
