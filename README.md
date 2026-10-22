@@ -26,17 +26,11 @@
     - [1.3.4. Break and Continue Statement:](#134-break-and-continue-statement)
     - [1.3.5. Nested Loop:](#135-nested-loop)
   - [1.4. Chapter 4: Array:](#14-chapter-4-array)
-    - [1.4.1. What is Array:](#141-what-is-array)
-    - [1.4.2. Array Input and Output:](#142-array-input-and-output)
-    - [1.4.3. Printing Reverse of an Array:](#143-printing-reverse-of-an-array)
-    - [1.4.4. Reverse Array Element(Two Pointers Technique):](#144-reverse-array-elementtwo-pointers-technique)
-    - [1.4.5. Selection Sort:](#145-selection-sort)
-    - [1.4.6. Sum of an Array:](#146-sum-of-an-array)
-    - [1.4.7. Counting Array:](#147-counting-array)
-    - [1.4.8. Sum of Two Value Equal X:](#148-sum-of-two-value-equal-x)
-    - [1.4.9. Insert Element in Array:](#149-insert-element-in-array)
-    - [1.4.10. Remove Element from an Array:](#1410-remove-element-from-an-array)
-    - [1.4.11. Array Concatenation:](#1411-array-concatenation)
+    - [1.4.1. Array Input and Output:](#141-array-input-and-output)
+    - [1.4.2. Reverse Array Element(Two Pointers Technique):](#142-reverse-array-elementtwo-pointers-technique)
+    - [1.4.3. Insert Element in Array:](#143-insert-element-in-array)
+    - [1.4.4. Remove Element from an Array:](#144-remove-element-from-an-array)
+    - [1.4.5. Array Concatenation:](#145-array-concatenation)
   - [1.5. Chapter 5: 2D Array:](#15-chapter-5-2d-array)
     - [1.5.1. What is 2D Array:](#151-what-is-2d-array)
     - [1.5.2. 2D Array Input and Output:](#152-2d-array-input-and-output)
@@ -697,17 +691,304 @@ int main()
 ![alt text](./images/pattern-1.png)
 
 ## 1.4. Chapter 4: Array:
-### 1.4.1. What is Array:
-### 1.4.2. Array Input and Output:
-### 1.4.3. Printing Reverse of an Array:
-### 1.4.4. Reverse Array Element(Two Pointers Technique):
-### 1.4.5. Selection Sort:
-### 1.4.6. Sum of an Array:
-### 1.4.7. Counting Array:
-### 1.4.8. Sum of Two Value Equal X:
-### 1.4.9. Insert Element in Array:
-### 1.4.10. Remove Element from an Array:
-### 1.4.11. Array Concatenation:
+An array is a variable that can store multiple values of the same data type.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr1[5] = {1, 2, 3, 4, 5}; 
+    int arr2[] = {1, 2, 3, 4, 5}; 
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", arr1[i]); // 1 2 3 4 5
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", arr2[i]); // 1 2 3 4 5
+    }
+
+    return 0;
+}
+```
+
+[!alt text](./images/array.png)
+
+### 1.4.1. Array Input and Output: 
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5];
+
+    arr[0] = 10;
+    arr[1] = 20;
+    arr[2] = 30;
+    arr[3] = 40;
+    arr[4] = 50;
+
+    printf("%d %d %d %d %d", arr[0], arr[1], arr[2], arr[3], arr[4]); // 10 20 30 40 50
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5];
+    scanf("%d %d %d %d %d", &arr[0], &arr[1], &arr[2], &arr[3], &arr[4]);
+
+    printf("%d %d %d %d %d", arr[0], arr[1], arr[2], arr[3], arr[4]); // 10 20 30 40 50
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+
+```c
+// most of the time we use this method to take input and output an array.
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/array2.png)
+
+### 1.4.2. Reverse Array Element(Two Pointers Technique):
+[!alt text](./images/Array3.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int i = 0, j = n - 1;
+
+    while (i < j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        i++;
+        j--;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+![alt text](./images/array4.png)
+![alt text](./images/array5.png)
+
+### 1.4.3. Insert Element in Array:
+![alt text](./images/array6.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[6] = {10, 20, 30, 40, 50}; // here 6 is the array size
+
+    arr[5] = arr[4]; // here 5 is the array index
+    arr[4] = arr[3];
+    arr[3] = arr[2];
+    arr[2] = arr[1];
+    arr[1] = 100;
+
+    for (int i = 0; i < 6; i++)
+    {
+        printf("%d ", arr[i]); // 10 100 20 30 40 50
+    }
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int arr[n + 1];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int idx, ele;
+    scanf("%d %d", &idx, &ele);
+    for (int i = n; i > idx; i--)
+    {
+        arr[i] = arr[i - 1];
+    }
+    arr[idx] = ele;
+
+    for (int i = 0; i <= n; i++)
+    {
+        printf("%d ", arr[i]); 
+    }
+
+    return 0;
+}
+```
+![alt text](./images/array7.png)
+
+
+### 1.4.4. Remove Element from an Array:
+![alt text](./images/array8.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    arr[1] = arr[2];
+    arr[2] = arr[3];
+    arr[3] = arr[4];
+
+    for (int i = 0; i < 5 - 1; i++)
+    {
+        printf("%d ", arr[i]); // 10 30 40 50
+    }
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int idx;
+    scanf("%d", &idx);
+
+    for (int i = idx; i < n - 1; i++)
+    {
+        arr[i] = arr[i + 1];
+    }
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/array9.png)
+
+
+
+### 1.4.5. Array Concatenation:
+![alt text](./images/array10.png)
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    int a[n];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+
+    int m;
+    scanf("%d", &m);
+    int b[m];
+    for (int i = 0; i < m; i++)
+    {
+        scanf("%d", &b[i]);
+    }
+
+    int ab[n + m];
+    for (int i = 0; i < n; i++)
+    {
+        ab[i] = a[i];
+    }
+    for (int i = 0; i < m; i++)
+    {
+        ab[n + i] = b[i];
+    }
+
+    for (int i = 0; i < n + m; i++)
+    {
+        printf("%d ", ab[i]);
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/array11.png)
 
 ## 1.5. Chapter 5: 2D Array:
 ### 1.5.1. What is 2D Array:
