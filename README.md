@@ -42,13 +42,8 @@
     - [1.6.6. String Concatenation:](#166-string-concatenation)
     - [1.6.7. Counting or Frequency String:](#167-counting-or-frequency-string)
   - [1.7. Chapter 7: Function:](#17-chapter-7-function)
-    - [1.7.1. What is Function:](#171-what-is-function)
-    - [1.7.2. Return + Parameter:](#172-return--parameter)
-    - [1.7.3. Return + No Parameter:](#173-return--no-parameter)
-    - [1.7.4. No Return + Parameter:](#174-no-return--parameter)
-    - [1.7.5. No Return + No Parameter:](#175-no-return--no-parameter)
-    - [1.7.6. Useful Built-In Functions:](#176-useful-built-in-functions)
-    - [1.7.7. Scopes in C:](#177-scopes-in-c)
+    - [1.7.1. Different Way to Write a Function:](#171-different-way-to-write-a-function)
+    - [1.7.2. Common Library Functions:](#172-common-library-functions)
   - [1.8. Chapter 8: Recursion:](#18-chapter-8-recursion)
     - [1.8.1. Call Stack:](#181-call-stack)
     - [1.8.2. What is Recursion:](#182-what-is-recursion)
@@ -1066,13 +1061,314 @@ int main()
 ### 1.6.7. Counting or Frequency String:
 
 ## 1.7. Chapter 7: Function:
-### 1.7.1. What is Function:
-### 1.7.2. Return + Parameter:
-### 1.7.3. Return + No Parameter:
-### 1.7.4. No Return + Parameter:
-### 1.7.5. No Return + No Parameter:
-### 1.7.6. Useful Built-In Functions:
-### 1.7.7. Scopes in C:
+A Function is a block of code that perform a specific task when it is called.
+
+Syntax:
+```c
+return_type function_name(parameters type and name) {
+    // Code to execute
+    return value;
+}
+```
+
+```c
+#include <stdio.h>
+
+int sum(int a, int b) {
+    int summation = a + b;
+    return summation;
+}
+
+int main() {
+    int result = sum(5, 10);
+    printf("Sum: %d", result);
+    return 0;
+}
+```
+![alt text](./images/function1.png)
+![alt text](./images/Parameters%20vs%20Arguments%20in%20C.png)
+
+
+### 1.7.1. Different Way to Write a Function:  
+- Return + Parameter:
+
+```c
+#include <stdio.h>
+
+int sum(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int result = sum(5, 10);
+    printf("Sum: %d", result); // Sum: 15
+    return 0;
+}
+```
+
+- Return + No Parameter:
+
+```c
+#include <stdio.h>
+
+int sum () {
+    int a = 5, b = 10;
+    int summation = a + b;
+    return summation;
+}
+
+int main() {
+    int result = sum();
+    printf("Sum: %d", result); // Sum: 15
+    return 0;
+}
+```
+
+- No Return + Parameter:
+
+```c
+#include <stdio.h>
+
+void sum(int a, int b) {
+    int summation = a + b;
+    printf("Sum: %d", summation); // Sum: 15
+}
+
+int main() {
+    sum(5, 10);
+    return 0;
+}
+```
+
+- No Return + No Parameter:
+
+```c
+#include <stdio.h>
+void sum() {
+    int a = 5, b = 10;
+    int summation = a + b;
+    printf("Sum: %d", summation); // Sum: 15
+}
+
+int main() {
+    sum();
+    return 0;
+}
+```
+
+### 1.7.2. Common Library Functions:
+In C, a library function is a predefined function that helps us perform common tasks without writing all the code ourselves. Each library function belongs to a header file, such as stdio.h, string.h, or math.h.
+
+- `<stdio.h>`: Used to read input from the user and display output.
+  
+| Function | Purpose |
+| --------- | ----------- | 
+| `printf()` | Prints output | 
+| `scanf()` | Reads formatted input | 
+| `getchar()` | Reads one character | 
+| `putchar()` | Prints one character | 
+| `fgets()` | Reads a line of text | 
+| `puts()` | Prints a string with a newline |
+
+```c
+
+#include <stdio.h>
+
+int main() {
+    int age;
+    char ch;
+    char name[50];
+
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // Clear the newline left by scanf()
+    getchar();
+
+    printf("Enter a character: ");
+    ch = getchar();
+
+    // Clear the newline left by getchar()
+    getchar();
+
+
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+
+    printf("\n");
+
+    puts("Your information:");
+    printf("Age: %d\n", age);
+    
+    printf("Your character is: ");
+    putchar(ch);
+    printf("\n");
+    
+    printf("Name: ");
+    puts(name);
+
+    return 0;
+}
+```
+
+![alt text](./images/function2.png)
+
+- `<math.h>`: Used to perform mathematical calculations.
+
+| Function | Purpose | Example Result |
+| --- | --- | --- |
+| `sqrt(x)` | Square root | `sqrt(25) → 5.0` |
+| `pow(x, y)` | Raises x to the power y | `pow(2, 3) → 8.0` |
+| `ceil(x)` | Rounds upward | `ceil(4.2) → 5.0` |
+| `floor(x)` | Rounds downward | `floor(4.8) → 4.0` |
+| `round(x)` | Rounds to the nearest integer value | `round(4.6) → 5.0` |
+| `fabs(x)` | Absolute value of a floating-point number | `fabs(-4.5) → 4.5` |
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // 1. sqrt() - Square root
+    printf("Square root: %.1f\n", sqrt(25)); // 5.0
+
+    // 2. pow() - Power
+    printf("Power: %.1f\n", pow(2, 3)); // 8.0
+
+    // 3. ceil() - Rounds upward
+    printf("Ceil: %.1f\n", ceil(4.2)); // 5.0
+
+    // 4. floor() - Rounds downward
+    printf("Floor: %.1f\n", floor(4.8)); // 4.0
+
+    // 5. round() - Rounds to the nearest integer
+    printf("Round: %.1f\n", round(4.4)); // 4.0
+    printf("Round: %.1f\n", round(4.5)); // 5.0
+    printf("Round: %.1f\n", round(4.6)); // 5.0
+
+    // 6. fabs() - Absolute value of a floating-point number
+    printf("Absolute value: %.1f\n", fabs(-4.5)); // 4.5
+
+    return 0;
+}
+```
+
+- `<string.h>`: Used to work with strings.
+
+| Function | Purpose |
+| --- | --- | 
+| `strlen()` | Gets the string length | 
+| `strcpy()` | Copies a string | 
+| `strcat()` | Appends one string to another | 
+| `strcmp()` | Compares two strings | 
+| `strchr()` | Finds a character in a string | 
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[50] = "Hello";
+    char str2[50] = " World";
+    char dest[50] = "Hello";
+    char *ptr;
+
+    // 1. strlen() - Gets the string length
+    printf("String length: %zu\n", strlen(str1)); // 5
+
+    // 2. strcpy() - Copies a string
+    strcpy(dest, "C Programming");
+    printf("Copied string: %s\n", dest); // C Programming
+
+    // 3. strcat() - Appends one string to another
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1); // Hello World
+
+    // 4. strcmp() - Compares two strings
+    printf("String comparison: %d\n", strcmp("abc", "abc")); // 0 (0 means 1st string == 2nd string)
+    printf("String comparison: %d\n", strcmp("abc", "def")); // -1 (negative means 1st string < 2nd string)
+    printf("String comparison: %d\n", strcmp("def", "abc")); // 1 (positive means 1st string > 2nd string)
+
+    // 5. strchr() - Finds a character in a string
+    ptr = strchr("Hello", 'e'); 
+
+    if (ptr != NULL) {
+        printf("Character found: %c\n", *ptr); // e
+    } else {
+        printf("Character not found\n");
+    }
+
+    return 0;
+}
+```
+
+Note: here The `strchr()` function searches for a specific character in a string and returns a pointer to the first occurrence of that character. 
+
+```c
+Syntax: strchr(string, character);`
+
+- string — the string to search.
+- character — the character you want to find.
+- Return value — a pointer to the character if found; otherwise, NULL.
+```
+
+- `<stdlib.h>`: Used for general purpose functions.
+
+| Function | Purpose |
+| --- | --- | 
+| `abs()` | Absolute value of an integer | 
+| `atoi()` | Converts a string to an integer | 
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // 1. abs() - Absolute value of an integer
+    printf("Absolute value: %d\n", abs(-10)); // 10
+
+    // 2. atoi() - Converts a string to an integer
+    char str[] = "123";
+    int num = atoi(str);
+    printf("Converted integer: %d\n", num); // 123
+
+    return 0;
+}
+```
+
+- `<ctype.h>`: Used to check or convert individual characters.
+
+| Function | Purpose | 
+| --- | --- | 
+| `isalpha()` | Checks whether a character is a letter |
+| `isdigit()` | Checks whether a character is a digit | 
+| `isalnum()` | Checks whether a character is a letter or digit | 
+| `isspace()` | Checks for whitespace | 
+| `toupper()` | Converts a lowercase letter to uppercase | 
+| `tolower()` | Converts an uppercase letter to lowercase |
+
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    printf("isalpha: %d\n", isalpha('A')); // 1 (true)
+    
+    printf("isdigit: %d\n", isdigit('5')); // 1 (true)
+    
+    printf("isalnum: %d\n", isalnum('A')); // 1 (true)
+    printf("isalnum: %d\n", isalnum('5')); // 1 (true)
+
+    printf("isspace: %d\n", isspace(' ')); // 1 (true)
+    
+    printf("toupper: %c\n", toupper('a')); // A
+    
+    printf("tolower: %c\n", tolower('A')); // a
+
+    return 0;
+}
+```
 
 ## 1.8. Chapter 8: Recursion:
 ### 1.8.1. Call Stack:
