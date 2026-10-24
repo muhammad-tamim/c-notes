@@ -46,11 +46,6 @@
     - [1.7.2. Common Library Functions:](#172-common-library-functions)
   - [1.8. Chapter 8: Recursion:](#18-chapter-8-recursion)
     - [1.8.1. Call Stack:](#181-call-stack)
-    - [1.8.2. What is Recursion:](#182-what-is-recursion)
-    - [1.8.3. Print 1 to 5 using Recursion:](#183-print-1-to-5-using-recursion)
-    - [1.8.4. Print 5 to 1 using Recursion:](#184-print-5-to-1-using-recursion)
-    - [1.8.5. Printing Array using Recursion:](#185-printing-array-using-recursion)
-    - [1.8.6. Length of a String using Recursion:](#186-length-of-a-string-using-recursion)
   - [1.9. Chapter 9: Pointer:](#19-chapter-9-pointer)
     - [1.9.1. Pointers:](#191-pointers)
     - [1.9.2. Call by Value or Pass By Value:](#192-call-by-value-or-pass-by-value)
@@ -1371,12 +1366,57 @@ int main() {
 ```
 
 ## 1.8. Chapter 8: Recursion:
+Recursion in programming is a technique where a function calls itself. It Has two main parts: 
+- Base Case: The condition that stops recursion and prevents infinite recursive calls, which can lead to a stack overflow.
+- Recursive Case: The part where a function calls itself with modified arguments that move the function toward the base case.
+
+```c
+#include <stdio.h>
+
+void great(int count) {
+    if (count == 0) { // Base Case
+        return;
+    }
+    printf("Hello\n");
+    great(count - 1); // Recursive Case
+}
+
+int main() {
+    great(5); // Initial Call with a limit
+    return 0;
+}
+```
+
+![alt text](./images/recursion1.png)
+![alt text](./images/recursion2.png)
+
 ### 1.8.1. Call Stack:
-### 1.8.2. What is Recursion:
-### 1.8.3. Print 1 to 5 using Recursion:
-### 1.8.4. Print 5 to 1 using Recursion:
-### 1.8.5. Printing Array using Recursion:
-### 1.8.6. Length of a String using Recursion:
+The call stack is a region of memory used to manage function calls. It keeps track of active function calls, including their parameters, local variables, and where execution should resume when a function returns. It follows Last-In-First-Out (LIFO) principle.
+
+```c
+#include <stdio.h>
+
+void functionA() {
+    int a = 10;
+    printf("Inside functionA: a = %d\n", a);
+}
+
+void functionB() {
+    int b = 20;
+    functionA();
+    printf("Inside functionB: b = %d\n", b);
+}
+
+int main() {
+    int c = 30;
+    functionB();
+    printf("Inside main: c = %d\n", c);
+    return 0;
+}
+```
+
+![alt text](./images/recursion3.png)
+![alt text](./images/recursion4.png)
 
 ## 1.9. Chapter 9: Pointer:
 ### 1.9.1. Pointers:
