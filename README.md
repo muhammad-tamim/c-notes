@@ -34,13 +34,7 @@
   - [1.5. Chapter 5: 2D Array:](#15-chapter-5-2d-array)
     - [1.5.1. 2D Array Input and Output:](#151-2d-array-input-and-output)
   - [1.6. chapter 6: String:](#16-chapter-6-string)
-    - [1.6.1. What is String:](#161-what-is-string)
     - [1.6.2. String Input and Output:](#162-string-input-and-output)
-    - [1.6.3. Length of a String:](#163-length-of-a-string)
-    - [1.6.4. String Copy:](#164-string-copy)
-    - [1.6.5. String Lexicographical Comparison:](#165-string-lexicographical-comparison)
-    - [1.6.6. String Concatenation:](#166-string-concatenation)
-    - [1.6.7. Counting or Frequency String:](#167-counting-or-frequency-string)
   - [1.7. Chapter 7: Function:](#17-chapter-7-function)
     - [1.7.1. Different Way to Write a Function:](#171-different-way-to-write-a-function)
     - [1.7.2. Common Library Functions:](#172-common-library-functions)
@@ -700,7 +694,7 @@ int main()
 }
 ```
 
-[!alt text](./images/array.png)
+![alt text](./images/array.png)
 
 ### 1.4.1. Array Input and Output: 
 
@@ -779,7 +773,7 @@ int main()
 ![alt text](./images/array2.png)
 
 ### 1.4.2. Reverse Array Element(Two Pointers Technique):
-[!alt text](./images/Array3.png)
+![alt text](./images/Array3.png)
 
 ```c
 #include <stdio.h>
@@ -1045,13 +1039,131 @@ int main()
 
 
 ## 1.6. chapter 6: String:
-### 1.6.1. What is String:
+In c, a string is an array of characters terminated by a null character `\0`. 
+
+Note: 
+- C uses character arrays to represent strings because it has no built-in string data type.
+- The null character ('\0') marks the end of a string. Therefore, a string of length N requires N + 1 elements, where N is the number of characters and +1 is for the null character.
+
+
+```c
+#include <stdio.h>
+int main(){
+    char str[5] = {'t','a','m','i','m'};
+
+    printf("%c%c%c%c%c", str[0], str[1], str[2],str[3],str[4]); // tamim
+
+    for(int i = 0; i < 5; i++){
+        printf("%c", str[i]); // tamim
+    }
+
+    return 0;
+}
+```
+
 ### 1.6.2. String Input and Output:
-### 1.6.3. Length of a String:
-### 1.6.4. String Copy:
-### 1.6.5. String Lexicographical Comparison:
-### 1.6.6. String Concatenation:
-### 1.6.7. Counting or Frequency String:
+We know string is an array of Characters, but string also have some extra features: 
+- `{'t','a','m','i','m'}` = `"tamim"`
+- We can use `%s` format specifier is used to take input and output a string.
+
+
+- Program 1:
+ 
+```c
+#include <stdio.h>
+int main(){
+    char str[5] = "tamim";  // string extra feature
+    for(int i = 0; i < 5; i++){
+        printf("%c", str[i]); // tamim
+    }
+    return 0;
+}
+```
+
+- Program 2:
+
+
+```c
+#include <stdio.h>
+
+int main(){
+    // char str[5] = "tamim"; // Garbage value will be printed after the string because we didn't add the null character `\0` at the end of the string.
+    char str[6] = "tamim"; // string extra feature (we will use this method most of the time)
+    // or
+    char str[6] = "tamim\0"; // string extra feature
+    // or
+    char str[6] = {'t','a','m','i','m','\0'}; // string extra feature
+    
+    printf("%s", str);
+    
+    return 0;
+}
+```
+
+- Program 3: 
+
+```c
+#include <stdio.h>
+int main(){
+    char str[6];
+    scanf("%s", str);
+    printf("%s", str); 
+}
+```
+
+Note: This code has a problem. This code doesn’t take space as an input.  Here scanf() count space as her ending. To solve this problem we can use `gets()` or `fgets()` function.
+
+```c
+#include <stdio.h>
+int main(){
+    char str[12];
+    gets(str);
+    printf("%s", str);
+}
+```
+
+Note: gets() reads an entire line of input until Enter is pressed, without checking the size of the buffer, which can lead to overflow. fgets() is safer as it reads up to N - 1 characters or until Enter is pressed, preventing buffer overflow. We should always use fgets() instead of gets().
+
+```c
+#include <stdio.h>
+int main(){
+    char str[12];
+    fgets(str,12,stdin);
+    printf("%s", str);
+}
+```
+
+NOTE: gets() and fgets() both accept spaces in the input, but scanf() does not. When you press Enter, both gets() and fgets() stop reading input, but fgets() includes an extra newline (\n) after pressing  Enter.
+
+- Program 4: 
+gets() and puts() = gets() reads a string from the user (unsafe), and puts() prints a string by adding an additional newline.
+
+```c
+#include <stdio.h>
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    gets(str);  
+    puts("You entered: ");
+    puts(str);  
+    return 0;
+}
+```
+
+- Program 5:
+fgets() and fputs() = fgets() reads a string from the user safely, and fputs() prints a string without adding a newline.  
+
+```c
+#include <stdio.h>
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // Safely reading a string
+    fputs("You entered: ", stdout);  // Printing the prompt
+    fputs(str, stdout);  // Printing the string without an automatic newline
+    return 0;
+}
+```
 
 ## 1.7. Chapter 7: Function:
 A Function is a block of code that perform a specific task when it is called.
