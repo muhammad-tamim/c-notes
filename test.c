@@ -1,19 +1,14 @@
 #include <stdio.h>
 
-void functionA() {
-    int a = 10;
-    printf("Inside functionA: a = %d\n", a);
-}
+void fun(char str[], int size){ 
+    for(int i = 0; i < size; i++){
+        printf("%c", str[i]); // Hello
+    }
 
-void functionB() {
-    int b = 20;
-    functionA();
-    printf("Inside functionB: b = %d\n", b);
-}
+}   
 
-int main() {
-    int c = 30;
-    functionB();
-    printf("Inside main: c = %d\n", c);
-    return 0;
+int main(){
+    char str[5] = "Hello";
+    int size = sizeof(str) / sizeof(char); // 5 / 1 = 5
+    fun(str, size);
 }

@@ -47,12 +47,10 @@
   - [1.8. Chapter 8: Recursion:](#18-chapter-8-recursion)
     - [1.8.1. Call Stack:](#181-call-stack)
   - [1.9. Chapter 9: Pointer:](#19-chapter-9-pointer)
-    - [1.9.1. Pointers:](#191-pointers)
-    - [1.9.2. Call by Value or Pass By Value:](#192-call-by-value-or-pass-by-value)
-    - [1.9.3. Call by Reference or Passed by Reference(Pointer Dereferencing Technique):](#193-call-by-reference-or-passed-by-referencepointer-dereferencing-technique)
+    - [Dereferencing Pointer:](#dereferencing-pointer)
+    - [Difference between call by value and call by reference.](#difference-between-call-by-value-and-call-by-reference)
     - [1.9.4. Relation Between Array and Pointer:](#194-relation-between-array-and-pointer)
-    - [1.9.5. How to Pass Array into a Function:](#195-how-to-pass-array-into-a-function)
-    - [1.9.6. How to pass String into a Function:](#196-how-to-pass-string-into-a-function)
+    - [1.9.5. How to Pass Array and String Into a Function:](#195-how-to-pass-array-and-string-into-a-function)
 - [2. Part 2: Problem Solving:](#2-part-2-problem-solving)
 
 # 1. Part 1: Language
@@ -1419,11 +1417,211 @@ int main() {
 ![alt text](./images/recursion4.png)
 
 ## 1.9. Chapter 9: Pointer:
-### 1.9.1. Pointers:
-### 1.9.2. Call by Value or Pass By Value:
-### 1.9.3. Call by Reference or Passed by Reference(Pointer Dereferencing Technique):
+The pointer is a variable which stores the address of another variable.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int num = 10;
+    int *ptr = &num;
+
+    printf("Value of num: %d\n", num); // value of num: 10
+    printf("Address of num: %p\n", &num); // address of num: 000000000061FE14
+
+    printf("Value of ptr: %p\n", ptr); // value of ptr: 000000000061FE14 
+    printf("Address of ptr: %p\n", &ptr); // address of ptr: 000000000061FE10
+    printf("Value of the variable that the pointer points to: %d\n", *ptr); // Value of the variable that the pointer points to: 10
+    return 0;
+}
+```
+
+### Dereferencing Pointer:
+Dereferencing a pointer means accessing or modifying the value that the pointer points to. This is done using the dereference operator `*`.
+  - pointer value means the memory address of the variable that the pointer is points to.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int num = 10;
+    int *ptr = &num;
+
+    printf("Original value of num: %d\n", num); // Original value of num: 10
+
+    // Access the value of num using dereferencing
+    printf("Original value through ptr: %d\n", *ptr); // Original value through ptr: 10
+
+    // Modify the value of num using dereferencing
+    *ptr = 50;
+
+    // Access the modified value using dereferencing
+    printf("Modified value through ptr: %d\n", *ptr); // Modified value through ptr: 50
+
+    printf("Modified value of num: %d\n", num); // Modified value of num: 50
+
+    return 0;
+}
+```
+
+Note: We did not change the pointer itself. The pointer ptr still stores the memory address of num; we changed the value of num by dereferencing the pointer.
+
+
+### Difference between call by value and call by reference.
+- Call by Value: In call by value, a copy of the actual parameter's value is passed to the function. Changes made to the parameter inside the function do not affect the original argument.
+```c
+#include <stdio.h>
+void fun(int x){
+    x = 100;
+}
+int main(){
+    int x = 10;
+    fun(x);
+    printf("%d", x); // 10
+}
+```
+
+- Call by Reference: In call by reference, the address of the actual parameter is passed to the function. Changes made to the parameter inside the function affect the original argument because of the pointer dereferencing.
+
+```c
+#include<stdio.h>
+void fun(int *p){
+    *p = 100;
+}
+int main(){
+    int x = 10;
+    fun(&x);
+    printf("%d", x); // 100
+}
+```
 ### 1.9.4. Relation Between Array and Pointer:
-### 1.9.5. How to Pass Array into a Function:
-### 1.9.6. How to pass String into a Function:
+In C, arrays and pointers are closely related because an array name usually converts to a pointer to its first element when used in an expression. This allows us to access array elements using pointer arithmetic and dereferencing.
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr;
+
+    printf("First element using array: %d\n", arr[0]); // First element: 10
+    printf("Second element using array: %d\n", arr[1]); // Second element: 20
+    printf("Third element using array: %d\n", arr[2]); // Third element: 30
+    printf("Fourth element using array: %d\n", arr[3]); // Fourth element: 40
+    printf("Fifth element using array: %d\n", arr[4]); // Fifth element: 50
+
+    printf("First element using pointer: %d\n", *ptr); // First element using pointer: 10
+    printf("Second element using pointer %d\n", *(ptr + 1)); // Second element using pointer: 20
+    printf("Third element using pointer %d\n", *(ptr + 2)); // Third element using pointer: 30
+    printf("Fourth element using pointer %d\n", *(ptr + 3)); // Fourth element using pointer: 40
+    printf("Fifth element using pointer %d\n", *(ptr + 4)); // Fifth element using pointer: 50
+
+    return 0;
+}
+```
+
+Note: Although arrays and pointers are closely related, an array is not a pointer. 
+
+### 1.9.5. How to Pass Array and String Into a Function:
+When we pass an array to a function, it is actually passed as a pointer to the first element of the array. Thats why the size of the array is lost when it is passed to the function. To overcome this issue, we can pass the size of the array as an additional parameter to the function for normal array and if we use string we can also use some built-in functions and operators such as `strlen()` and `%s`.
+
+- Array:
+
+```c
+// wrong approach
+#include <stdio.h>
+
+void fun(int arr[]){ // int arr[] == int *arr and sizeOf(*arr) = 8 bytes 
+    int size = sizeof(arr) / sizeof(int); // 8 / 4 = 2
+    printf("Array size in the fun function = %d\n", size); // Array size in the fun function = 2
+
+    printf("%d\n", *arr); // 10
+
+    for(int i = 0; i < size; i++){
+        printf("%d ", arr[i]); // 10 20
+    }
+}
+
+int main(){
+    int arr[5] = {10,20,30,40,50};
+    int size = sizeof(arr) / sizeof(int); // 20 / 4 = 5
+    printf("Array size in the main function = %d\n", size); //  Array size in the main function = 5
+    fun(arr);
+}
+```
+
+```c
+// correct approach
+#include <stdio.h>
+void fun(int *arr, int size){ // int arr[] == int *arr
+    for(int i = 0; i < size; i++){
+        printf("%d ", arr[i]); // 10 20 30 40 50
+    }
+
+}   
+
+int main(){
+    int arr[5] = {10,20,30,40,50};
+    int size = sizeof(arr) / sizeof(int);
+    fun(arr, size);
+}
+```
+
+- String:
+
+```c
+#include <stdio.h>
+
+void fun(char str[], int size){ // char str[] == char *str
+    for(int i = 0; i < size; i++){
+        printf("%c", str[i]); // Hello
+    }
+
+}   
+
+int main(){
+    char str[5] = "Hello";
+    int size = sizeof(str) / sizeof(char); // 5 / 1 = 5
+    fun(str, size);
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h> 
+
+void fun(char s[]) { // char s[] == char *s
+    int sz = strlen(s);
+    printf("size of string into fun: %d\n", sz);
+
+    for(int i = 0; i < sz; i++) {
+        printf("%c", s[i]); // Hello
+    }
+}
+
+int main() {
+    char s[10] = "Hello";
+    fun(s);
+    int sz = strlen(s);
+    printf("size of string into main: %d\n", sz);
+    return 0;
+} 
+```
+
+```c
+#include <stdio.h>
+
+void fun(char str[]){ // char str[] == char *str
+    printf("%s", str); // Hello
+}
+
+int main(){
+    char str[] = "Hello";
+    fun(str);
+}  
+```
 
 # 2. Part 2: Problem Solving:
