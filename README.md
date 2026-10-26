@@ -34,17 +34,22 @@
   - [1.5. Chapter 5: 2D Array:](#15-chapter-5-2d-array)
     - [1.5.1. 2D Array Input and Output:](#151-2d-array-input-and-output)
   - [1.6. chapter 6: String:](#16-chapter-6-string)
-    - [1.6.2. String Input and Output:](#162-string-input-and-output)
+    - [1.6.1. `get()/puts()` and `fgets()/fputs()` functions:](#161-getputs-and-fgetsfputs-functions)
+    - [Length of a string:](#length-of-a-string)
+    - [String Copy:](#string-copy)
+    - [String Lexicographical Comparison:](#string-lexicographical-comparison)
+    - [String Concatenation:](#string-concatenation)
+    - [Counting or Frequency String:](#counting-or-frequency-string)
   - [1.7. Chapter 7: Function:](#17-chapter-7-function)
     - [1.7.1. Different Way to Write a Function:](#171-different-way-to-write-a-function)
     - [1.7.2. Common Library Functions:](#172-common-library-functions)
   - [1.8. Chapter 8: Recursion:](#18-chapter-8-recursion)
     - [1.8.1. Call Stack:](#181-call-stack)
   - [1.9. Chapter 9: Pointer:](#19-chapter-9-pointer)
-    - [Dereferencing Pointer:](#dereferencing-pointer)
-    - [Difference between call by value and call by reference.](#difference-between-call-by-value-and-call-by-reference)
-    - [1.9.4. Relation Between Array and Pointer:](#194-relation-between-array-and-pointer)
-    - [1.9.5. How to Pass Array and String Into a Function:](#195-how-to-pass-array-and-string-into-a-function)
+    - [1.9.1. Dereferencing Pointer:](#191-dereferencing-pointer)
+    - [1.9.2. Difference between call by value and call by reference.](#192-difference-between-call-by-value-and-call-by-reference)
+    - [1.9.3. Relation Between Array and Pointer:](#193-relation-between-array-and-pointer)
+    - [1.9.4. How to Pass Array and String Into a Function:](#194-how-to-pass-array-and-string-into-a-function)
 - [2. Part 2: Problem Solving:](#2-part-2-problem-solving)
 
 # 1. Part 1: Language
@@ -153,39 +158,38 @@ Full Explanation:
 - double = 8 bytes = 64 bits = `10^14` = `it allows up to approximately 15 digits precision (1.12345678912345 = 15 digits)`
 - char = 1 byte = 8 bits = `2^8` = `256` = `-128 to 127 (65 = A, 90 = Z, 97 = a, 122 = z)` 
 
-```c
-#include <stdio.h>
-#include <limits.h>
-#include <float.h>
-
-int main(void)
-{
-    printf("int: %zu bytes, range %d to %d\n",
-           sizeof(int), INT_MIN, INT_MAX); // int: 4 bytes, range -2147483648 to 2147483647
-
-    printf("long long int: %zu bytes, range %lld to %lld\n",
-           sizeof(long long int), LLONG_MIN, LLONG_MAX); // long long int: 8 bytes, range -9223372036854775808 to 9223372036854775807
-
-    printf("float: %zu bytes, range %e to %e\n",
-           sizeof(float), -FLT_MAX, FLT_MAX); // float: 4 bytes, range -3.402823e+38 to 3.402823e+38
-
-    printf("double: %zu bytes, range %e to %e\n",
-           sizeof(double), -DBL_MAX, DBL_MAX); // double: 8 bytes, range -1.797693e+308 to 1.797693e+308
-
-    printf("char: %zu bytes, range %d to %d\n",
-           sizeof(char), CHAR_MIN, CHAR_MAX); // char: 1 bytes, range -128 to 127
- 
-    return 0;
-}
-```
-
 Note: 
-- 1 bit = 0 or 1
+- 0 or 1 = 1 bit
 - 8 bit = 1 byte
 - 1024 bytes = 1 KB
 - 1024 KB = 1 MB
 - 1024 MB = 1GB
 - 1024 GB = 1 TB
+
+```c
+#include <stdio.h>
+#include <limits.h>
+#include <float.h>
+
+int main(){
+    printf("int: %d bytes, range %d to %d\n",
+           sizeof(int), INT_MIN, INT_MAX); // int: 4 bytes, range -2147483648 to 2147483647
+
+    printf("long long int: %d bytes, range %lld to %lld\n",
+           sizeof(long long int), LLONG_MIN, LLONG_MAX); // long long int: 8 bytes, range -9223372036854775808 to 9223372036854775807
+
+    printf("float: %d bytes, range %e to %e\n",
+           sizeof(float), -FLT_MAX, FLT_MAX); // float: 4 bytes, range -3.402823e+38 to 3.402823e+38
+
+    printf("double: %d bytes, range %e to %e\n",
+           sizeof(double), -DBL_MAX, DBL_MAX); // double: 8 bytes, range -1.797693e+308 to 1.797693e+308
+
+    printf("char: %d bytes, range %d to %d\n",
+           sizeof(char), CHAR_MIN, CHAR_MAX); // char: 1 bytes, range -128 to 127
+ 
+    return 0;
+}
+```
 
 ### 1.1.5. How to Take Input:
 
@@ -248,9 +252,9 @@ int main()
 ```
 
 ### 1.1.6. Difference Between Pre and Post:
-`Pre-increment (++i):` First increments the value of i, then assigns it.
+`Pre (++i/--i):` First increments/decrements the value, then assigns it.
 
-`Post-increment (i++):` First assigns the value, then increments i.
+`Post (i++/i--):` First assigns the value, then increments/decrements.
 
 
 - Pre: 
@@ -259,15 +263,13 @@ int main()
 int main(){
     int i = 10;
     int x = ++i;
-    // ------------->
 
-    printf("x = %d\n", x);
-    printf("i = %d", i);
+    printf("x = %d\n", x); // x = 11
+    printf("i = %d", i); // i = 11
 
     return 0;
 }
 ```
-Note: Here, i is incremented to 11 first, and then this new value is assigned to x. Both i and x are 11 after this operation.
 
 - Post: 
 ```c
@@ -275,18 +277,16 @@ Note: Here, i is incremented to 11 first, and then this new value is assigned to
 int main(){
     int i = 10;
     int x = i++;
-    // ------------->
 
-    printf("x = %d\n", x);
-    printf("i = %d", i);
+    printf("x = %d\n", x); // x = 10
+    printf("i = %d", i); // i = 11
 
     return 0;
 }
 ```
 
-Note: First, the value of i (which is 10) is assigned to the variable x. After that, i is incremented, so i becomes 11.
-
 ### 1.1.7. Operator Precedence:
+Operator precedence is the rule that determines which operator is evaluated first when an expression contains multiple operators.
 ![alt text](./images/operator-precedence.png)
 
 ```
@@ -349,8 +349,7 @@ int main()
     return 0;
 }
 ```
-
-![alt text](./images/escape-sequence-output.png)
+![alt text](./images/escape-sequence-otuput-2.png)
 
 ## 1.2. Chapter 2: Operators and Conditional Statement(if-else):
 ### 1.2.1. Operators: 
@@ -397,6 +396,8 @@ int main()
 - Divisor = ২ (যা দিয়ে ভাগ করা হবে)
 - Quotient = 3 (ভাগফল)
 - Remainder = 1 (ভাগশেষ)
+
+Note: ভাগ এর ক্ষেত্রে সব সময় Dividend বড় হতে হবে।
 
 #### 1.2.1.2. Relational Operators(>, <, >=, <=, ==, !=):
 
@@ -1039,17 +1040,18 @@ int main()
 
 
 ## 1.6. chapter 6: String:
-In c, a string is an array of characters terminated by a null character `\0`. 
+In c, a string is a characters array terminated by a null character `\0`. 
 
 Note: 
 - C uses character arrays to represent strings because it has no built-in string data type.
 - The null character ('\0') marks the end of a string. Therefore, a string of length N requires N + 1 elements, where N is the number of characters and +1 is for the null character.
-
+- `{'t','a','m','i','m'}` = `"tamim"`
+- We can use `%s` format specifier is used to take input and output a string.
 
 ```c
 #include <stdio.h>
 int main(){
-    char str[5] = {'t','a','m','i','m'};
+    char str[6] = {'t','a','m','i','m','\0'};
 
     printf("%c%c%c%c%c", str[0], str[1], str[2],str[3],str[4]); // tamim
 
@@ -1061,27 +1063,16 @@ int main(){
 }
 ```
 
-### 1.6.2. String Input and Output:
-We know string is an array of Characters, but string also have some extra features: 
-- `{'t','a','m','i','m'}` = `"tamim"`
-- We can use `%s` format specifier is used to take input and output a string.
-
-
-- Program 1:
- 
 ```c
 #include <stdio.h>
 int main(){
-    char str[5] = "tamim";  // string extra feature
+    char str[6] = "tamim";  // string extra feature
     for(int i = 0; i < 5; i++){
         printf("%c", str[i]); // tamim
     }
     return 0;
 }
 ```
-
-- Program 2:
-
 
 ```c
 #include <stdio.h>
@@ -1100,8 +1091,6 @@ int main(){
 }
 ```
 
-- Program 3: 
-
 ```c
 #include <stdio.h>
 int main(){
@@ -1111,32 +1100,13 @@ int main(){
 }
 ```
 
-Note: This code has a problem. This code doesn’t take space as an input.  Here scanf() count space as her ending. To solve this problem we can use `gets()` or `fgets()` function.
+Note: Above code has a problem. This code doesn’t take space as an input.  Here scanf() count space as her ending. To solve this problem we can use `gets()` or `fgets()` function.
 
-```c
-#include <stdio.h>
-int main(){
-    char str[12];
-    gets(str);
-    printf("%s", str);
-}
-```
 
-Note: gets() reads an entire line of input until Enter is pressed, without checking the size of the buffer, which can lead to overflow. fgets() is safer as it reads up to N - 1 characters or until Enter is pressed, preventing buffer overflow. We should always use fgets() instead of gets().
+### 1.6.1. `get()/puts()` and `fgets()/fputs()` functions:
+This function is an alternative to scanf() and printf() functions. These functions are only used to read and write strings.
 
-```c
-#include <stdio.h>
-int main(){
-    char str[12];
-    fgets(str,12,stdin);
-    printf("%s", str);
-}
-```
-
-NOTE: gets() and fgets() both accept spaces in the input, but scanf() does not. When you press Enter, both gets() and fgets() stop reading input, but fgets() includes an extra newline (\n) after pressing  Enter.
-
-- Program 4: 
-gets() and puts() = gets() reads a string from the user (unsafe), and puts() prints a string by adding an additional newline.
+- gets() and puts() = gets() reads a string from the user (unsafe), and puts() prints a string by adding an additional newline.
 
 ```c
 #include <stdio.h>
@@ -1150,8 +1120,16 @@ int main() {
 }
 ```
 
-- Program 5:
-fgets() and fputs() = fgets() reads a string from the user safely, and fputs() prints a string without adding a newline.  
+```c
+#include <stdio.h>
+int main(){
+    char str[12];
+    gets(str);
+    printf("%s", str);
+}
+```
+
+- fgets() and fputs() = fgets() reads a string from the user safely, and fputs() prints a string without adding a newline.  
 
 ```c
 #include <stdio.h>
@@ -1161,6 +1139,321 @@ int main() {
     fgets(str, sizeof(str), stdin);  // Safely reading a string
     fputs("You entered: ", stdout);  // Printing the prompt
     fputs(str, stdout);  // Printing the string without an automatic newline
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+int main(){
+    char str[12];
+    fgets(str,12,stdin);
+    printf("%s", str);
+}
+```
+
+### Length of a string:
+
+![alt text](./images/C%20String%20Character%20Array%20Diagram.png)
+
+```c
+#include <stdio.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    //scanf(“%s   “, str);    error
+    
+    int i = 0;
+    int count = 0;
+    while(str[i] != '\0'){
+        count++;
+        i++;
+    }
+    printf("%d", count);
+    return 0;
+}
+```
+
+```c
+#include<stdio.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    int count = 0;
+    for(int i = 0; str[i] != '\0'; i++){
+        count++;
+    }
+    printf("%d", count);
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    printf("%d", strlen(str));
+    return 0;
+}
+```
+
+### String Copy:
+
+![alt text](./images/string-copy.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str1[100], str2[100];
+    scanf("%s %s", str1, str2);
+    for(int i = 0; i <= strlen(str2); i++){
+        str1[i] = str2[i];
+    }
+    printf("%s %s", str1, str2);
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str1[100], str2[100];
+    scanf("%s %s", str1, str2);
+    strcpy(str1,str2);
+    printf("%s %s", str1, str2);
+}
+```
+
+### String Lexicographical Comparison:
+Explanation:
+  
+```
+apple < apply
+apple < applicant
+acde > abcdegdf 
+abcd > abc
+abd < abde
+abd == abd
+abc < edf
+abcd < adef
+
+so here we get 4 cases: 
+
+Case 1: if both strings have reached their end (\0) at the same time it means they are the same.
+Case 2: If str1 ends first (reaches \0 before str2), it means that str1 is shorter than `str2
+Case 3: If str2 ends first (reaches \0 before str1), it means that str2 is shorter than str1.
+Case 4: If the characters at the current position are the same, we move to the next character by incrementing i.
+Case 5: If str1 is less than str2, it means that str1 is shorter than str2
+Case 6: If str2 is less than str1, it means that str2 is shorter than str1
+
+```
+
+pseudo code: 
+
+```
+str1[i] == '\0' && str2[i] == '\0'---> str1 and str2 are same
+str1[i] == '\0' ---> str1 is small
+str2[i] == '\0' ---> str2 is small
+str1[i] == str2[i] ---> i++
+str1[i] < str2[i] ---> str1 is small
+str2[i] < str1[i] ---> str2 is small
+```
+
+
+```c
+#include <stdio.h>
+int main(){
+    char str1[100], str2[100];
+    scanf("%s %s", str1, str2);
+    int i = 0;
+
+    while(1){
+        // Case 1
+        if(str1[i] == '\0' && str2[i] == '\0'){
+            printf("str1 == str2");
+            break;
+        }
+
+        // Case 2
+        else if(str1[i] == '\0'){
+            printf("str1 is smaller");
+            break;
+        }
+        // case 3
+        else if(str2[i] == '\0'){
+            printf("str2 is smaller");
+            break;
+        }
+
+        // case 4
+        if(str1[i] == str2[i]){
+            i++;
+        }
+        // case 5
+        else if(str1[i] < str2[i]){
+            printf("str1 is smaller");
+            break;
+        }
+        // case 6
+        else if(str2[i] < str1[i]){
+            printf("str2 is smaller");
+            break;
+        }
+    }
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str1[100], str2[200];
+    scanf("%s %s", str1, str2);
+
+    int check = strcmp(str1, str2);
+    if(check < 0){
+        printf("str1 is small");
+    }
+    else if(check > 0){
+        printf("str2 is small");
+    }
+    else{
+        printf("Str1 == str2");
+    }
+    return 0;
+}
+```
+
+Note: here strcmp(str1,str2) function return 3 values:
+1.	Value of strcmp == 0 ---> str1 == str2
+2.	Value of strcmp < 0 --->str1 is small
+3.	Value of strcmp > 0 ---> str2 is small
+
+### String Concatenation:
+
+![alt text](./images/C%20String%20Concatenation%20Infographic.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str1[100], str2[100];
+    scanf("%s %s", str1, str2);
+
+    char str[strlen(str1) + strlen(str2)];
+
+    for(int i = 0; i < strlen(str1); i++){
+        str[i] =str1[i];
+    }
+    for(int i = 0; i <= strlen(str2); i++){
+        str[strlen(str1) + i] = str2[i];
+    }
+
+    printf("%s", str);
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char a[200], b[100];
+    scanf("%s %s", a,b);
+    int len_a = strlen(a);
+    for(int i = 0; i <= strlen(b); i++){
+        a[len_a] = b[i];
+        len_a++;
+    }
+    printf("%s", a);
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char a[200], b[100];
+    scanf("%s %s", a,b);
+    strcat(a,b);
+    printf("%s", a); // printf("%s", strcat(a, b));
+    return 0;
+}
+```
+
+### Counting or Frequency String:
+![alt text](./images/counting.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    int cnt[26] = {0};
+
+    for(int i = 0; i < strlen(str); i++){
+        cnt[str[i] - 'a']++;  // or str[i] - 97; 
+    }
+    for(int i = 0; i < 26; i++){
+        printf("%c = %d\n", i + 'a', cnt[i]);
+    }
+
+    return 0; 
+}
+```
+
+![alt text](./images/counting2.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    int cnt[26] = {0};
+
+    for(int i = 0; i < strlen(str); i++){
+        int value = str[i] - 'a';
+        cnt[value]++;
+    }
+    for(int i = 0; i < 26; i++){
+        if(cnt[i] != 0){
+            printf("%c = %d\n", i + 97, cnt[i]);
+        }
+    }
+
+    return 0;
+}
+```
+
+![alt text](./images/counting3.png)
+
+```c
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char str[100];
+    scanf("%s", str);
+    int cnt[26] = {0};
+
+    for(int i = 0; i < strlen(str); i++){
+        int value = str[i] - 'a';
+        cnt[value]++;
+    }
+    for(int i = 0; i < strlen(str); i++){
+        int value = str[i] - 97;
+        if(cnt[value] != 0){
+            printf("%c = %d\n", value + 97, cnt[value]);
+        }
+        cnt[value] = 0;
+    }
     return 0;
 }
 ```
@@ -1195,7 +1488,6 @@ int main() {
 
 
 ### 1.7.1. Different Way to Write a Function:  
-- Return + Parameter:
 
 ```c
 #include <stdio.h>
@@ -1210,8 +1502,6 @@ int main() {
     return 0;
 }
 ```
-
-- Return + No Parameter:
 
 ```c
 #include <stdio.h>
@@ -1229,7 +1519,6 @@ int main() {
 }
 ```
 
-- No Return + Parameter:
 
 ```c
 #include <stdio.h>
@@ -1245,7 +1534,6 @@ int main() {
 }
 ```
 
-- No Return + No Parameter:
 
 ```c
 #include <stdio.h>
@@ -1267,16 +1555,17 @@ In C, a library function is a predefined function that helps us perform common t
 - `<stdio.h>`: Used to read input from the user and display output.
   
 | Function | Purpose |
-| --------- | ----------- | 
-| `printf()` | Prints output | 
-| `scanf()` | Reads formatted input | 
-| `getchar()` | Reads one character | 
-| `putchar()` | Prints one character | 
-| `fgets()` | Reads a line of text | 
-| `puts()` | Prints a string with a newline |
+| --- | --- |
+| `scanf()` | Reads input |
+| `printf()` | Prints output |
+| `getchar()` | Reads one character |
+| `putchar()` | Prints one character |
+| `fgets()` | Reads a line of text with a specified buffer size |
+| `puts()` | Prints a string followed by a newline |
+| `fputs()` | Writes a string to an output stream without automatically adding a newline |
+| `gets()` | Reads a line of text without checking buffer size (**unsafe; removed in C11**) |
 
 ```c
-
 #include <stdio.h>
 
 int main() {
@@ -1296,27 +1585,23 @@ int main() {
     // Clear the newline left by getchar()
     getchar();
 
-
     printf("Enter your name: ");
     fgets(name, sizeof(name), stdin);
 
-    printf("\n");
-
-    puts("Your information:");
+    puts("\nYour information:");
     printf("Age: %d\n", age);
-    
+
     printf("Your character is: ");
     putchar(ch);
-    printf("\n");
-    
+    putchar('\n');
+
     printf("Name: ");
-    puts(name);
+    fputs(name, stdout);
 
     return 0;
 }
 ```
-
-![alt text](./images/function2.png)
+![alt text](./images/stdio-h.png)
 
 - `<math.h>`: Used to perform mathematical calculations.
 
@@ -1526,7 +1811,7 @@ int main() {
 ```
 
 ![alt text](./images/recursion3.png)
-![alt text](./images/recursion4.png)
+![alt text](./images/call-stack-2.png)
 
 ## 1.9. Chapter 9: Pointer:
 The pointer is a variable which stores the address of another variable.
@@ -1544,12 +1829,13 @@ int main()
 
     printf("Value of ptr: %p\n", ptr); // value of ptr: 000000000061FE14 
     printf("Address of ptr: %p\n", &ptr); // address of ptr: 000000000061FE10
-    printf("Value of the variable that the pointer points to: %d\n", *ptr); // Value of the variable that the pointer points to: 10
+    printf("Value of the variable that the pointer points to: %d\n", *ptr); 
+    // Value of the variable that the pointer points to: 10
     return 0;
 }
 ```
 
-### Dereferencing Pointer:
+### 1.9.1. Dereferencing Pointer:
 Dereferencing a pointer means accessing or modifying the value that the pointer points to. This is done using the dereference operator `*`.
   - pointer value means the memory address of the variable that the pointer is points to.
 
@@ -1581,7 +1867,7 @@ int main()
 Note: We did not change the pointer itself. The pointer ptr still stores the memory address of num; we changed the value of num by dereferencing the pointer.
 
 
-### Difference between call by value and call by reference.
+### 1.9.2. Difference between call by value and call by reference.
 - Call by Value: In call by value, a copy of the actual parameter's value is passed to the function. Changes made to the parameter inside the function do not affect the original argument.
 ```c
 #include <stdio.h>
@@ -1608,7 +1894,7 @@ int main(){
     printf("%d", x); // 100
 }
 ```
-### 1.9.4. Relation Between Array and Pointer:
+### 1.9.3. Relation Between Array and Pointer:
 In C, arrays and pointers are closely related because an array name usually converts to a pointer to its first element when used in an expression. This allows us to access array elements using pointer arithmetic and dereferencing.
 
 ```c
@@ -1637,7 +1923,7 @@ int main()
 
 Note: Although arrays and pointers are closely related, an array is not a pointer. 
 
-### 1.9.5. How to Pass Array and String Into a Function:
+### 1.9.4. How to Pass Array and String Into a Function:
 When we pass an array to a function, it is actually passed as a pointer to the first element of the array. Thats why the size of the array is lost when it is passed to the function. To overcome this issue, we can pass the size of the array as an additional parameter to the function for normal array and if we use string we can also use some built-in functions and operators such as `strlen()` and `%s`.
 
 - Array:
@@ -1707,7 +1993,7 @@ int main(){
 
 void fun(char s[]) { // char s[] == char *s
     int sz = strlen(s);
-    printf("size of string into fun: %d\n", sz);
+    printf("size of string into fun: %d\n", sz); // 5
 
     for(int i = 0; i < sz; i++) {
         printf("%c", s[i]); // Hello
@@ -1715,10 +2001,10 @@ void fun(char s[]) { // char s[] == char *s
 }
 
 int main() {
-    char s[10] = "Hello";
+    char s[10] = "Hello";`
     fun(s);
     int sz = strlen(s);
-    printf("size of string into main: %d\n", sz);
+    printf("size of string into main: %d\n", sz); // 5
     return 0;
 } 
 ```

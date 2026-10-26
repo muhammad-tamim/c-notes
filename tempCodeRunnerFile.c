@@ -1,18 +1,34 @@
-
 #include <stdio.h>
-#include <stdlib.h>
 
 int main() {
-    // 1. abs() - Absolute value of an integer
-    printf("Absolute value: %d\n", abs(-10)); // 10
+    int age;
+    char ch;
+    char name[50];
 
-    // 3. rand() - Generates a pseudo-random integer
-    printf("Random number: %d\n", rand() % 100); // Random number between 0 and 99
+    printf("Enter your age: ");
+    scanf("%d", &age);
 
-    // 4. atoi() - Converts a string to an integer
-    char str[] = "123";
-    int num = atoi(str);
-    printf("Converted integer: %d\n", num); // 123
+    // Clear the newline left by scanf()
+    getchar();
+
+    printf("Enter a character: ");
+    ch = getchar();
+
+    // Clear the newline left by getchar()
+    getchar();
+
+    printf("Enter your name: ");
+    fgets(name, sizeof(name), stdin);
+
+    puts("\nYour information:");
+    printf("Age: %d\n", age);
+
+    printf("Your character is: ");
+    putchar(ch);
+    putchar('\n');
+
+    printf("Name: ");
+    fputs(name, stdout);
 
     return 0;
 }
