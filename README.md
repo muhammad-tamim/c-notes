@@ -51,8 +51,22 @@
     - [1.9.3. Relation Between Array and Pointer:](#193-relation-between-array-and-pointer)
     - [1.9.4. How to Pass Array and String Into a Function:](#194-how-to-pass-array-and-string-into-a-function)
 - [2. Part 2: Problem Solving:](#2-part-2-problem-solving)
-  - [2.1. Data type and Conditions:](#21-data-type-and-conditions)
-    - [Say Hello With C++](#say-hello-with-c)
+  - [2.1. Sheet 1 (Data type and Conditions):](#21-sheet-1-data-type-and-conditions)
+    - [2.1.1. A - Say Hello With C++:](#211-a---say-hello-with-c)
+    - [B - Basic Data Types:](#b---basic-data-types)
+    - [C. Simple Calculator:](#c-simple-calculator)
+  - [2.2. Contest 1:](#22-contest-1)
+  - [2.3. Sheet 2 (Loops):](#23-sheet-2-loops)
+  - [2.4. Contest 2:](#24-contest-2)
+  - [2.5. Sheet 3 (Arrays):](#25-sheet-3-arrays)
+  - [2.6. Contest 3:](#26-contest-3)
+  - [2.7. Sheet 4 (Strings):1](#27-sheet-4-strings1)
+  - [2.8. Sheet 5 (Functions):](#28-sheet-5-functions)
+  - [2.9. Sheet 6 (Math - Geometry):](#29-sheet-6-math---geometry)
+  - [2.10. Sheet 7 (Recursion):](#210-sheet-7-recursion)
+  - [2.11. Sheet 8 (General easy):](#211-sheet-8-general-easy)
+  - [2.12. Sheet 9 (General medium):](#212-sheet-9-general-medium)
+  - [2.13. Sheet 10 (General Hard):](#213-sheet-10-general-hard)
 
 # 1. Part 1: Language
 ## 1.1. Chapter 1: Basic Syntax, Variables and Data Types:
@@ -2025,8 +2039,9 @@ int main(){
 ```
 
 # 2. Part 2: Problem Solving:
-## 2.1. Data type and Conditions:
-### Say Hello With C++
+## 2.1. Sheet 1 (Data type and Conditions):
+
+### 2.1.1. A - Say Hello With C++:
 https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/A
 
 ```c
@@ -2046,3 +2061,52 @@ int main(void) {
 |Time Complexity | Space Complexity |
 |---|---|
 |  O(n) | O(1) |
+
+### B - Basic Data Types:
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/B
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a;
+    long long int b;
+    char c;
+    float d;
+    double e;
+
+    scanf("%d %lld %c %f %lf", &a, &b, &c, &d, &e);
+
+    printf("%d\n", a);
+    printf("%lld\n", b);
+    printf("%c\n", c);
+    printf("%.2f\n", d);
+    printf("%.1lf", e);
+
+    return 0;
+}
+```
+
+| Time Complexity | Space Complexity |
+|---|---|
+| O(1) | O(1) |
+
+
+### C. Simple Calculator:
+
+
+
+
+## 2.2. Contest 1:
+## 2.3. Sheet 2 (Loops):
+## 2.4. Contest 2:
+## 2.5. Sheet 3 (Arrays):
+## 2.6. Contest 3:
+## 2.7. Sheet 4 (Strings):1
+## 2.8. Sheet 5 (Functions):
+## 2.9. Sheet 6 (Math - Geometry): 
+## 2.10. Sheet 7 (Recursion): 
+## 2.11. Sheet 8 (General easy): 
+## 2.12. Sheet 9 (General medium): 
+## 2.13. Sheet 10 (General Hard): 
