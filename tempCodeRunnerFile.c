@@ -1,34 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    int age;
-    char ch;
-    char name[50];
+    float x;
+    scanf("%f", &x);
 
-    printf("Enter your age: ");
-    scanf("%d", &age);
+    double area = 3.141592653 * x * x; // pow(x, 2) = x * x
 
-    // Clear the newline left by scanf()
-    getchar();
-
-    printf("Enter a character: ");
-    ch = getchar();
-
-    // Clear the newline left by getchar()
-    getchar();
-
-    printf("Enter your name: ");
-    fgets(name, sizeof(name), stdin);
-
-    puts("\nYour information:");
-    printf("Age: %d\n", age);
-
-    printf("Your character is: ");
-    putchar(ch);
-    putchar('\n');
-
-    printf("Name: ");
-    fputs(name, stdout);
+    printf("%.9lf\n", area);
 
     return 0;
 }
