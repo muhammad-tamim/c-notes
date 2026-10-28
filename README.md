@@ -19,6 +19,7 @@
       - [1.2.2.1. If-Else:](#1221-if-else)
       - [1.2.2.2. If-Else Ladder:](#1222-if-else-ladder)
       - [1.2.2.3. Nested If-Else:](#1223-nested-if-else)
+    - [Ternary Operator:](#ternary-operator)
   - [1.3. Chapter 3: Loop:](#13-chapter-3-loop)
     - [1.3.1. For-Loop:](#131-for-loop)
     - [1.3.2. While Loop:](#132-while-loop)
@@ -53,8 +54,31 @@
 - [2. Part 2: Problem Solving:](#2-part-2-problem-solving)
   - [2.1. Sheet 1 (Data type and Conditions):](#21-sheet-1-data-type-and-conditions)
     - [2.1.1. A - Say Hello With C++:](#211-a---say-hello-with-c)
-    - [B - Basic Data Types:](#b---basic-data-types)
-    - [C. Simple Calculator:](#c-simple-calculator)
+    - [2.1.2. B - Basic Data Types:](#212-b---basic-data-types)
+    - [2.1.3. C. Simple Calculator:](#213-c-simple-calculator)
+    - [2.1.4. D. Difference:](#214-d-difference)
+    - [2.1.5. E. Area of a Circle:](#215-e-area-of-a-circle)
+    - [2.1.6. F Digits Summation:](#216-f-digits-summation)
+    - [2.1.7. G Summation from 1 to N:](#217-g-summation-from-1-to-n)
+    - [2.1.8. H Two numbers:](#218-h-two-numbers)
+    - [2.1.9. I Welcome for you with Conditions:](#219-i-welcome-for-you-with-conditions)
+    - [2.1.10. J Multiples:](#2110-j-multiples)
+    - [2.1.11. K Max and Min:](#2111-k-max-and-min)
+    - [2.1.12. L The Brothers:](#2112-l-the-brothers)
+    - [2.1.13. M Capital or Small or Digit:](#2113-m-capital-or-small-or-digit)
+    - [2.1.14. N Char:](#2114-n-char)
+    - [2.1.15. O Calculator:](#2115-o-calculator)
+    - [2.1.16. P First digit!:](#2116-p-first-digit)
+    - [2.1.17. Q Coordinates of a Point:](#2117-q-coordinates-of-a-point)
+    - [2.1.18. R Age in Days:](#2118-r-age-in-days)
+    - [2.1.19. S Interval:](#2119-s-interval)
+    - [2.1.20. T Sort Numbers:](#2120-t-sort-numbers)
+    - [2.1.21. U Float or int:](#2121-u-float-or-int)
+    - [2.1.22. V Comparison:](#2122-v-comparison)
+    - [2.1.23. W Mathematical Expression:](#2123-w-mathematical-expression)
+    - [2.1.24. X Two intervals:](#2124-x-two-intervals)
+    - [2.1.25. Y The last 2 digits:](#2125-y-the-last-2-digits)
+    - [2.1.26. Z Hard Compare:](#2126-z-hard-compare)
   - [2.2. Contest 1:](#22-contest-1)
   - [2.3. Sheet 2 (Loops):](#23-sheet-2-loops)
   - [2.4. Contest 2:](#24-contest-2)
@@ -524,6 +548,35 @@ If(condition == ture){
 }
 Else{
 	Statement 4;
+}
+```
+
+### Ternary Operator:
+The ternary operator is a shorthand way of writing an if-else statement. 
+
+Syntax: 
+```c
+condition ? expression_if_true : expression_if_false;
+```
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int num;
+    scanf("%d", &num);
+
+/*
+    if (num % 2 == 0) {
+        printf("Even");
+    } else {
+        printf("Odd");
+    }
+*/
+
+    (num % 2 == 0) ? printf("Even") : printf("Odd");
+
+    return 0;
 }
 ```
 
@@ -2058,11 +2111,7 @@ int main(void) {
 }
 ```
 
-|Time Complexity | Space Complexity |
-|---|---|
-|  O(n) | O(1) |
-
-### B - Basic Data Types:
+### 2.1.2. B - Basic Data Types:
 
 https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/B
 
@@ -2088,14 +2137,660 @@ int main() {
 }
 ```
 
-| Time Complexity | Space Complexity |
-|---|---|
-| O(1) | O(1) |
+
+### 2.1.3. C. Simple Calculator:
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/C
+
+```c
+#include <stdio.h>
+
+int main() {
+    int x, y;
+    scanf("%d %d", &x, &y);
+
+    printf("%d + %d = %d\n", x, y, x + y); // 10^5 + 10^5 = 2*10^5 = 200000  
+    printf("%d * %d = %lld\n", x, y, (long long int) x * y); // 10^5 * 10^5 = 10^10
+    printf("%d - %d = %d\n", x, y, x - y); // 10^5 - 10^5 = 0
+
+    return 0;
+}
+```
+
+### 2.1.4. D. Difference:
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/D
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b, c, d;
+    scanf("%d %d %d %d", &a, &b, &c, &d);
+    printf("Difference = %lld", (long long int) ((long long int) a * b) - ( (long long int) c * d)); 
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    long long int a, b, c, d;
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &d);
+    long long int result = (a * b) - (c * d);
+    printf("Difference = %lld\n", result);
+
+    return 0;
+}
+```
+
+### 2.1.5. E. Area of a Circle:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/E
+
+```c
+#include <stdio.h>
+
+int main() {
+    float x;
+    scanf("%f", &x);
+
+    double area = 3.141592653 * x * x; // pow(x, 2) = x * x
+
+    printf("%.9lf\n", area);
+
+    return 0;
+} 
+```
+
+### 2.1.6. F Digits Summation:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/F
+
+```c
+#include <stdio.h>
+
+int main() {
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
+
+    int lastDigitOfA = a % 10;
+    int lastDigitOfB = b % 10;
+
+    int sum = lastDigitOfA + lastDigitOfB;
+
+    printf("%d", sum);
+
+    return 0;
+}
+```
+
+### 2.1.7. G Summation from 1 to N:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/G
+
+```c
+#include <stdio.h>
+
+int main() {
+    long long int n;
+    scanf("%lld", &n);
+
+    long long int summation1toN = n * (n + 1) / 2;
+
+    printf("%lld", summation1toN);
+
+    return 0;
+}
+```
+
+### 2.1.8. H Two numbers:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/H
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+
+    printf("floor %d / %d = %.0f\n", num1, num2, floor((float)num1 / (float)num2));
+    printf("ceil %d / %d = %.0f\n", num1, num2, ceil((float)num1 / (float)num2));
+    printf("round %d / %d = %.0f\n", num1, num2, round((float)num1 / (float)num2));
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+
+    float division = (float)num1 / (float)num2;
+
+    if(num1 % num2 == 0){
+        printf("floor %d / %d = %d\n", num1, num2, (int)division);    
+        printf("ceil %d / %d = %d\n", num1, num2, (int)division);    
+        printf("round %d / %d = %d\n", num1, num2, (int)division);    
+    }
+    else{
+        printf("floor %d / %d = %d\n", num1, num2, (int)division);
+        printf("ceil %d / %d = %d\n", num1, num2, (int)division + 1);
+        if(division >= ((int)division + 0.5)) {
+            printf("round %d / %d = %d\n", num1, num2, (int)division + 1);
+        } 
+        else {
+            printf("round %d / %d = %d\n", num1, num2, (int)division);
+        }
+    }
+
+    return 0;
+}
+```
+
+### 2.1.9. I Welcome for you with Conditions:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/I
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    if(a >= b){
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.10. J Multiples:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/J
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    if(a % b == 0 || b % a == 0) {
+        printf("Multiples");
+    } else {
+        printf("No Multiples");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.11. K Max and Min:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/K
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    int min = a;
+    int max = a;
+
+    if (b < min) min = b;
+    if (c < min) min = c;
+
+    if (b > max) max = b;
+    if (c > max) max = c;
+
+    printf("%d %d\n", min, max);
+
+    return 0;
+}
+```
+
+### 2.1.12. L The Brothers:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/L
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char firstName1[100000], secondName1[100000];
+    char firstName2[100000], secondName2[100000];
+
+    scanf("%s %s", firstName1, secondName1);
+    scanf("%s %s", firstName2, secondName2);
+
+    if(strcmp(secondName1, secondName2) == 0) {
+        printf("ARE Brothers");
+    } 
+    else {
+        printf("NOT");
+    }
+
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    char firstName1[100000], secondName1[100000];
+    char firstName2[100000], secondName2[100000];
+
+    scanf("%s %s", firstName1, secondName1);
+    scanf("%s %s", firstName2, secondName2);
+
+    int i = 0;
+
+    while (secondName1[i] != '\0' && secondName2[i] != '\0' && secondName1[i] == secondName2[i]) {
+        i++;
+    }
+
+    if (secondName1[i] == secondName2[i]) {
+        printf("ARE Brothers");
+    } else {
+        printf("NOT");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.13. M Capital or Small or Digit:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/M
 
 
-### C. Simple Calculator:
+```C
+#include <stdio.h>
 
+int main() {
+    char c;
+    scanf("%c", &c);
 
+    if(c >= 48 && c <= 57) {
+        printf("IS DIGIT\n");
+    }
+    else if(c >= 65 && c <= 90) {
+        printf("ALPHA\n");
+        printf("IS CAPITAL\n");
+    }
+    else if(c >= 97 && c <= 122) {
+        printf("ALPHA\n");
+        printf("IS SMALL\n");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.14. N Char:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/N
+
+```c
+#include <stdio.h>
+
+int main() {
+    char c;
+    scanf("%c", &c);
+
+    if(c >= 97 && c <= 122){
+        printf("%c", c - 32);
+    }
+    else if(c >= 65 && c <= 90){
+        printf("%c", c + 32);
+    }
+
+    return 0;
+}
+```
+
+### 2.1.15. O Calculator:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/O
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    char c;
+    scanf("%d %c %d", &a, &c, &b);
+
+   if(c == '+') {
+        printf("%d\n", a + b);
+    } 
+    else if(c == '-') {
+        printf("%d\n", a - b);
+    } 
+    else if(c == '*') {
+        printf("%d\n", a * b);
+    } 
+    else if(c == '/') {
+            printf("%d\n", a / b);
+    }
+    return 0;
+}
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    char c;
+    scanf("%d %c %d", &a, &c, &b);
+
+    switch (c) {
+        case '+':
+            printf("%d\n", a + b);
+            break;
+        case '-':
+            printf("%d\n", a - b);
+            break;
+        case '*':
+            printf("%d\n", a * b);
+            break;
+        case '/':
+            printf("%d\n", a / b); 
+            break;
+    }
+
+    return 0;
+}
+```
+
+### 2.1.16. P First digit!:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/P
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num; 
+    scanf("%d", &num);
+
+    int firstDigit = num / 1000;
+
+    if(firstDigit % 2 == 0){
+        printf("EVEN");
+    }
+    else{
+        printf("ODD");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.17. Q Coordinates of a Point:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Q
+
+```c
+#include <stdio.h>
+
+int main() {
+    float num1, num2;
+    scanf("%f %f", &num1, &num2);
+
+    if(num1 == 0 && num2 == 0){
+        printf("Origem\n");
+    }
+    else if(num1 == 0){
+        printf("Eixo Y\n");
+    }
+    else if(num2 == 0){
+        printf("Eixo X\n");
+    }
+    else if(num1 > 0 && num2 > 0){
+        printf("Q1\n");
+    }
+    else if(num1 < 0 && num2 > 0){
+        printf("Q2\n");
+    }
+    else if(num1 < 0 && num2 < 0){
+        printf("Q3\n");
+    }
+    else if(num1 > 0 && num2 < 0){
+        printf("Q4\n");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.18. R Age in Days:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/R
+
+```c
+#include <stdio.h>
+
+int main() {
+    int days;
+    scanf("%d", &days);
+
+    int years = days / 365;
+    int remainingDays = days % 365;
+    int months = remainingDays / 30;
+    remainingDays = remainingDays % 30;
+    
+    printf("%d years\n", years);
+    printf("%d months\n", months);
+    printf("%d days\n", remainingDays);
+
+    return 0;
+}
+```
+
+### 2.1.19. S Interval:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/S
+
+```c
+#include <stdio.h>
+
+int main() {
+    float interval;
+    scanf("%f", &interval);
+
+    if(interval >= 0 && interval <= 25){
+        printf("Interval [0,25]\n");
+    }
+    else if(interval > 25 && interval <= 50){
+        printf("Interval (25,50]\n");
+    }
+    else if(interval > 50 && interval <= 75){
+        printf("Interval (50,75]\n");
+    }
+    else if(interval > 75 && interval <= 100){
+        printf("Interval (75,100]\n");
+    }
+    else{
+        printf("Out of Intervals\n");
+    }
+
+    return 0;
+}
+```
+
+### 2.1.20. T Sort Numbers:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/T
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    scanf("%d %d %d", &num1, &num2, &num3);
+
+    int smallest = num1;
+    if(num2 < smallest) {
+        smallest = num2;
+    }
+    if(num3 < smallest) {
+        smallest = num3;
+    }
+
+    int largest = num1;
+    if(num2 > largest) {
+        largest = num2;
+    }
+    if(num3 > largest) {
+        largest = num3;
+    }
+
+    int middle = num1 + num2 + num3 - smallest - largest;
+
+    printf("%d\n%d\n%d\n", smallest, middle, largest);
+    printf("\n");
+    printf("%d\n%d\n%d\n", num1, num2, num3);
+
+    return 0;
+}
+```
+
+### 2.1.21. U Float or int:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/U
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    float x;
+    scanf("%f", &x);
+
+    int integerPart = x; // (int)x
+    float decimalPart = x - integerPart;
+
+    if (decimalPart == 0) {
+        printf("int %d\n", integerPart);
+    } 
+    else {
+        printf("float %d %.3f\n", integerPart, decimalPart);
+    }
+
+    return 0;
+}
+```
+
+### 2.1.22. V Comparison:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/V
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    char sign;
+    scanf("%d %c %d", &num1, &sign, &num2);
+
+    if(sign == '<'){
+        if(num1 < num2){
+            printf("Right");
+        }
+        else{
+            printf("Wrong");
+        }
+    }
+    else if(sign == '>'){
+        if(num1 > num2){
+            printf("Right");
+        }
+        else{
+            printf("Wrong");
+        }
+    }
+    else if(sign == '='){
+        if(num1 == num2){
+            printf("Right");
+        }
+        else{
+            printf("Wrong");
+        }
+    }
+
+    return 0;
+}
+```
+
+### 2.1.23. W Mathematical Expression:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/W
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+    char sign, sign2;
+    scanf("%d %c %d %c %d", &num1, &sign, &num2, &sign2, &num3);
+
+    if(sign == '+'){
+        if(num1 + num2 == num3){
+            printf("Yes");
+        }
+        else{
+            printf("%d", num1 + num2);
+        }
+    }
+    else if(sign == '-'){
+        if(num1 - num2 == num3){
+            printf("Yes");
+        }
+        else{
+            printf("%d", num1 - num2);
+        }
+    }
+    else if(sign == '*'){
+        if(num1 * num2 == num3){
+            printf("Yes");
+        }
+        else{
+            printf("%d", num1 * num2);
+        }
+    }
+    
+
+    return 0;
+}
+```
+
+### 2.1.24. X Two intervals:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/X
+
+### 2.1.25. Y The last 2 digits:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Y
+
+### 2.1.26. Z Hard Compare:
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/Z
+
+```c
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    long long int a,b,c,d;
+    scanf("%lld %lld %lld %lld", &a, &b, &c, &d);
+
+    if(b*log(a) > d*log(c)){
+        printf("YES");
+    }
+    else{
+        printf("NO");
+    }
+
+    return 0;
+}
+```
 
 
 ## 2.2. Contest 1:
