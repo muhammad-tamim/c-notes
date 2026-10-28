@@ -35,11 +35,11 @@
     - [1.5.1. 2D Array Input and Output:](#151-2d-array-input-and-output)
   - [1.6. chapter 6: String:](#16-chapter-6-string)
     - [1.6.1. `get()/puts()` and `fgets()/fputs()` functions:](#161-getputs-and-fgetsfputs-functions)
-    - [Length of a string:](#length-of-a-string)
-    - [String Copy:](#string-copy)
-    - [String Lexicographical Comparison:](#string-lexicographical-comparison)
-    - [String Concatenation:](#string-concatenation)
-    - [Counting or Frequency String:](#counting-or-frequency-string)
+    - [1.6.2. Length of a string:](#162-length-of-a-string)
+    - [1.6.3. String Copy:](#163-string-copy)
+    - [1.6.4. String Lexicographical Comparison:](#164-string-lexicographical-comparison)
+    - [1.6.5. String Concatenation:](#165-string-concatenation)
+    - [1.6.6. Counting or Frequency String:](#166-counting-or-frequency-string)
   - [1.7. Chapter 7: Function:](#17-chapter-7-function)
     - [1.7.1. Different Way to Write a Function:](#171-different-way-to-write-a-function)
     - [1.7.2. Common Library Functions:](#172-common-library-functions)
@@ -51,6 +51,8 @@
     - [1.9.3. Relation Between Array and Pointer:](#193-relation-between-array-and-pointer)
     - [1.9.4. How to Pass Array and String Into a Function:](#194-how-to-pass-array-and-string-into-a-function)
 - [2. Part 2: Problem Solving:](#2-part-2-problem-solving)
+  - [2.1. Data type and Conditions:](#21-data-type-and-conditions)
+    - [Say Hello With C++](#say-hello-with-c)
 
 # 1. Part 1: Language
 ## 1.1. Chapter 1: Basic Syntax, Variables and Data Types:
@@ -1152,7 +1154,7 @@ int main(){
 }
 ```
 
-### Length of a string:
+### 1.6.2. Length of a string:
 
 ![alt text](./images/C%20String%20Character%20Array%20Diagram.png)
 
@@ -1200,7 +1202,7 @@ int main(){
 }
 ```
 
-### String Copy:
+### 1.6.3. String Copy:
 
 ![alt text](./images/string-copy.png)
 
@@ -1228,7 +1230,7 @@ int main(){
 }
 ```
 
-### String Lexicographical Comparison:
+### 1.6.4. String Lexicographical Comparison:
 Explanation:
   
 ```
@@ -1334,7 +1336,7 @@ Note: here strcmp(str1,str2) function return 3 values:
 2.	Value of strcmp < 0 --->str1 is small
 3.	Value of strcmp > 0 ---> str2 is small
 
-### String Concatenation:
+### 1.6.5. String Concatenation:
 
 ![alt text](./images/C%20String%20Concatenation%20Infographic.png)
 
@@ -1387,7 +1389,7 @@ int main(){
 }
 ```
 
-### Counting or Frequency String:
+### 1.6.6. Counting or Frequency String:
 ![alt text](./images/counting.png)
 
 ```c
@@ -2023,3 +2025,24 @@ int main(){
 ```
 
 # 2. Part 2: Problem Solving:
+## 2.1. Data type and Conditions:
+### Say Hello With C++
+https://codeforces.com/group/MWSDmqGsZm/contest/219158/problem/A
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    char name[101];
+
+    scanf("%100s", name);
+
+    printf("Hello, %s\n", name);
+
+    return 0;
+}
+```
+
+|Time Complexity | Space Complexity |
+|---|---|
+|  O(n) | O(1) |
