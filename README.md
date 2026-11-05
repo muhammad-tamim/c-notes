@@ -91,15 +91,44 @@
     - [2.2.9. I: Lucky Numbers:](#229-i-lucky-numbers)
   - [2.3. Sheet 2 (Loops):](#23-sheet-2-loops)
   - [2.4. Contest 2:](#24-contest-2)
-  - [2.5. Sheet 3 (Arrays):](#25-sheet-3-arrays)
-  - [2.6. Contest 3:](#26-contest-3)
-  - [2.7. Sheet 4 (Strings):1](#27-sheet-4-strings1)
-  - [2.8. Sheet 5 (Functions):](#28-sheet-5-functions)
-  - [2.9. Sheet 6 (Math - Geometry):](#29-sheet-6-math---geometry)
-  - [2.10. Sheet 7 (Recursion):](#210-sheet-7-recursion)
-  - [2.11. Sheet 8 (General easy):](#211-sheet-8-general-easy)
-  - [2.12. Sheet 9 (General medium):](#212-sheet-9-general-medium)
-  - [2.13. Sheet 10 (General Hard):](#213-sheet-10-general-hard)
+  - [2.5. Patterns:](#25-patterns)
+    - [2.5.1. Beginner:](#251-beginner)
+      - [2.5.1.1. Square Fill Pattern](#2511-square-fill-pattern)
+      - [2.5.1.2. Right Half Pyramid](#2512-right-half-pyramid)
+      - [2.5.1.3. Reverse Right Half Pyramid](#2513-reverse-right-half-pyramid)
+      - [2.5.1.4. Number Triangular](#2514-number-triangular)
+      - [2.5.1.5. Number Increasing Pyramid](#2515-number-increasing-pyramid)
+      - [2.5.1.6. Number Increasing Reverse Pyramid](#2516-number-increasing-reverse-pyramid)
+    - [2.5.2. Intermediate](#252-intermediate)
+      - [2.5.2.1. Left Half Pyramid](#2521-left-half-pyramid)
+      - [2.5.2.2. Reverse Left Half Pyramid](#2522-reverse-left-half-pyramid)
+      - [2.5.2.3. Rhombus Pattern](#2523-rhombus-pattern)
+      - [2.5.2.4. Triangle Star Pattern](#2524-triangle-star-pattern)
+      - [2.5.2.5. Reverse Number Triangle Pattern](#2525-reverse-number-triangle-pattern)
+      - [2.5.2.6. Number Changing Pyramid](#2526-number-changing-pyramid)
+      - [2.5.2.7. Zero-One Triangle](#2527-zero-one-triangle)
+      - [2.5.2.8. Square Hollow Pattern](#2528-square-hollow-pattern)
+      - [2.5.2.9. Palindrome Triangular](#2529-palindrome-triangular)
+      - [2.5.2.10. K Pattern](#25210-k-pattern)
+      - [2.5.2.11. Right Pascal's Triangle](#25211-right-pascals-triangle)
+      - [2.5.2.12. Mirror Image Triangle Pattern](#25212-mirror-image-triangle-pattern)
+    - [2.5.3. Advanced](#253-advanced)
+      - [2.5.3.1. Diamond Pattern](#2531-diamond-pattern)
+      - [2.5.3.2. Butterfly Star Pattern](#2532-butterfly-star-pattern)
+      - [2.5.3.3. Hollow Triangle Pattern](#2533-hollow-triangle-pattern)
+      - [2.5.3.4. Hollow Reverse Triangle Pattern](#2534-hollow-reverse-triangle-pattern)
+      - [2.5.3.5. Hollow Diamond Pattern](#2535-hollow-diamond-pattern)
+      - [2.5.3.6. Hollow Hourglass Pattern](#2536-hollow-hourglass-pattern)
+      - [2.5.3.7. Pascal's Triangle](#2537-pascals-triangle)
+  - [2.6. Sheet 3 (Arrays):](#26-sheet-3-arrays)
+  - [2.7. Contest 3:](#27-contest-3)
+  - [2.8. Sheet 4 (Strings):1](#28-sheet-4-strings1)
+  - [2.9. Sheet 5 (Functions):](#29-sheet-5-functions)
+  - [2.10. Sheet 6 (Math - Geometry):](#210-sheet-6-math---geometry)
+  - [2.11. Sheet 7 (Recursion):](#211-sheet-7-recursion)
+  - [2.12. Sheet 8 (General easy):](#212-sheet-8-general-easy)
+  - [2.13. Sheet 9 (General medium):](#213-sheet-9-general-medium)
+  - [2.14. Sheet 10 (General Hard):](#214-sheet-10-general-hard)
 
 # 1. Part 1: Language
 ## 1.1. Chapter 1: Basic Syntax, Variables and Data Types:
@@ -3164,12 +3193,823 @@ any_number / 0          // Undefined behavior or runtime error
 
 ## 2.3. Sheet 2 (Loops):
 ## 2.4. Contest 2:
-## 2.5. Sheet 3 (Arrays):
-## 2.6. Contest 3:
-## 2.7. Sheet 4 (Strings):1
-## 2.8. Sheet 5 (Functions):
-## 2.9. Sheet 6 (Math - Geometry): 
-## 2.10. Sheet 7 (Recursion): 
-## 2.11. Sheet 8 (General easy): 
-## 2.12. Sheet 9 (General medium): 
-## 2.13. Sheet 10 (General Hard): 
+## 2.5. Patterns: 
+![Patterns](./images/Pattern-Printing-in-c.jpg)
+
+###  2.5.1. Beginner:
+#### 2.5.1.1. Square Fill Pattern
+
+```text
+* * * *
+* * * *
+* * * *
+* * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.1.2. Right Half Pyramid
+
+```text
+*
+* *
+* * *
+* * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.1.3. Reverse Right Half Pyramid
+
+```text
+* * * *
+* * *
+* *
+*
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.1.4. Number Triangular
+
+```text
+1
+2 2
+3 3 3
+4 4 4 4
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.1.5. Number Increasing Pyramid
+
+```text
+1
+1 2
+1 2 3
+1 2 3 4
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= i; j++){
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.1.6. Number Increasing Reverse Pyramid
+
+```text
+1 2 3 4
+1 2 3
+1 2
+1
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+### 2.5.2. Intermediate
+
+#### 2.5.2.1. Left Half Pyramid
+
+```text
+      *
+    * *
+  * * *
+* * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.2. Reverse Left Half Pyramid
+
+```text
+* * * *
+  * * *
+    * *
+      *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s < i; s++)
+            printf("  ");
+        for (int j = i; j <= n; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.3. Rhombus Pattern
+
+```text
+* * * *
+  * * * *
+    * * * *
+      * * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s < i; s++)
+            printf("  ");
+        for (int j = 1; j <= n; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.4. Triangle Star Pattern
+
+```text
+      *
+    * * *
+  * * * * *
+* * * * * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.5. Reverse Number Triangle Pattern
+
+```text
+1 2 3 4
+  2 3 4
+    3 4
+      4
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s < i; s++)
+            printf("  ");
+        for (int j = i; j <= n; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.6. Number Changing Pyramid
+
+```text
+1
+2 3
+4 5 6
+7 8 9 10
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+   int number = 1;
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", number);
+            number++;
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.7. Zero-One Triangle
+
+```text
+1
+0 1
+1 0 1
+0 1 0 1
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            if ((i + j) % 2 == 0)
+            printf("1 ");
+            else
+            printf("0 ");
+        }
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+#### 2.5.2.8. Square Hollow Pattern
+
+```
+* * * *
+*     *
+*     *
+* * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            if (i == 1 || i == n || j == 1 || j == n){
+                printf("* ");
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.9. Palindrome Triangular
+
+```text
+1
+2 1 2
+3 2 1 2 3
+4 3 2 1 2 3 4
+```
+
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = i; j >= 1; j--)
+            printf("%d ", j);
+        for (int j = 2; j <= i; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+    
+    return 0;
+}
+```
+
+#### 2.5.2.10. K Pattern
+
+```text
+* * * *
+* * *
+* *
+*
+* *
+* * *
+* * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+    for (int i = 2; i <= n; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.11. Right Pascal's Triangle
+
+```text
+      *
+    * *
+  * * *
+* * * *
+  * * *
+    * *
+      *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.2.12. Mirror Image Triangle Pattern
+
+```text
+1 2 3 4
+  2 3 4
+    3 4
+      4
+    3 4
+  2 3 4
+1 2 3 4
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s < i; s++)
+            printf("  ");
+        for (int j = i; j <= n; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int s = 1; s < i; s++)
+            printf("  ");
+        for (int j = i; j <= n; j++)
+            printf("%d ", j);
+        printf("\n");
+    }
+
+
+    return 0;
+}
+```
+
+### 2.5.3. Advanced
+
+#### 2.5.3.1. Diamond Pattern
+
+```text
+      *
+    * * *
+  * * * * *
+* * * * * * *
+  * * * * *
+    * * *
+      *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++)
+            printf("* ");
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.3.2. Butterfly Star Pattern
+
+```text
+*             *
+* *         * *
+* * *     * * *
+* * * * * * * *
+* * *     * * *
+* *         * *
+*             *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        for (int s = 1; s <= 2 * (n - i); s++)
+            printf("  ");
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        for (int s = 1; s <= 2 * (n - i); s++)
+            printf("  ");
+        for (int j = 1; j <= i; j++)
+            printf("* ");
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.3.3. Hollow Triangle Pattern
+
+```text
+      *
+    *   *
+  *       *
+* * * * * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (i == n || j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+
+
+    return 0;
+}
+```
+
+#### 2.5.3.4. Hollow Reverse Triangle Pattern
+
+```text
+* * * * * * *
+  *       *
+    *   *
+      *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (i == n || j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.3.5. Hollow Diamond Pattern
+
+```text
+      *
+    *   *
+  *       *
+*           *
+  *       *
+    *   *
+      *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+    for (int i = n - 1; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.3.6. Hollow Hourglass Pattern
+
+```text
+* * * * * * *
+  *       *
+    *   *
+      *
+    *   *
+  *       *
+* * * * * * *
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = n; i >= 1; i--) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (i == n || j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+    for (int i = 2; i <= n; i++) {
+        for (int s = 1; s <= n - i; s++)
+            printf("  ");
+        for (int j = 1; j <= 2 * i - 1; j++) {
+            if (i == n || j == 1 || j == 2 * i - 1)
+                printf("* ");
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+#### 2.5.3.7. Pascal's Triangle
+
+```text
+          1
+        1   1
+      1   2   1
+    1   3   3   1
+  1   4   6   4   1
+```
+
+```c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        for (int s = 0; s < n - i - 1; s++)
+            printf("  ");
+
+        long long value = 1;
+        for (int j = 0; j <= i; j++) {
+            printf("%4lld", value);
+            if (j < i)
+                value = value * (i - j) / (j + 1);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+
+## 2.6. Sheet 3 (Arrays):
+## 2.7. Contest 3:
+## 2.8. Sheet 4 (Strings):1
+## 2.9. Sheet 5 (Functions):
+## 2.10. Sheet 6 (Math - Geometry): 
+## 2.11. Sheet 7 (Recursion): 
+## 2.12. Sheet 8 (General easy): 
+## 2.13. Sheet 9 (General medium): 
+## 2.14. Sheet 10 (General Hard): 
