@@ -19,7 +19,7 @@
       - [1.2.2.1. If-Else:](#1221-if-else)
       - [1.2.2.2. If-Else Ladder:](#1222-if-else-ladder)
       - [1.2.2.3. Nested If-Else:](#1223-nested-if-else)
-    - [Ternary Operator:](#ternary-operator)
+    - [1.2.3. Ternary Operator:](#123-ternary-operator)
   - [1.3. Chapter 3: Loop:](#13-chapter-3-loop)
     - [1.3.1. For-Loop:](#131-for-loop)
     - [1.3.2. While Loop:](#132-while-loop)
@@ -80,6 +80,15 @@
     - [2.1.25. Y The last 2 digits:](#2125-y-the-last-2-digits)
     - [2.1.26. Z Hard Compare:](#2126-z-hard-compare)
   - [2.2. Contest 1:](#22-contest-1)
+    - [2.2.1. A. Winter Sale:](#221-a-winter-sale)
+    - [2.2.2. B: Memo and Momo:](#222-b-memo-and-momo)
+    - [2.2.3. C: Next Alphabet:](#223-c-next-alphabet)
+    - [2.2.4. D: Ali Baba and Puzzles:](#224-d-ali-baba-and-puzzles)
+    - [2.2.5. E: Interval Sweep:](#225-e-interval-sweep)
+    - [2.2.6. F: Adding Bits:](#226-f-adding-bits)
+    - [2.2.7. G: Katryoshka: (Hard)](#227-g-katryoshka-hard)
+    - [2.2.8. H: Data Type Guessing:](#228-h-data-type-guessing)
+    - [2.2.9. I: Lucky Numbers:](#229-i-lucky-numbers)
   - [2.3. Sheet 2 (Loops):](#23-sheet-2-loops)
   - [2.4. Contest 2:](#24-contest-2)
   - [2.5. Sheet 3 (Arrays):](#25-sheet-3-arrays)
@@ -551,7 +560,7 @@ Else{
 }
 ```
 
-### Ternary Operator:
+### 1.2.3. Ternary Operator:
 The ternary operator is a shorthand way of writing an if-else statement. 
 
 Syntax: 
@@ -2860,6 +2869,299 @@ int main() {
 
 
 ## 2.2. Contest 1:
+### 2.2.1. A. Winter Sale:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/A
+
+```c
+#include <stdio.h>
+
+int main() {
+    float discountedParcentage, newPrice;
+    scanf("%f %f", &discountedParcentage, &newPrice);
+
+    float originalPrice =  newPrice / (1 - discountedParcentage / 100);
+    printf("%.2f", originalPrice);
+
+    return 0;
+}
+```
+s
+Universal Parcentage formula: 
+N = O * (1 +- D / 100)  
+Where:
+- N = New Price
+- O = Original Price
+- D = Discounted Percentage
+
+
+### 2.2.2. B: Memo and Momo:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/B
+
+```c
+#include <stdio.h>
+
+int main() {
+    long long int num1, num2, num3;
+    scanf("%lld %lld %lld", &num1, &num2, &num3);
+
+    if(num1 % num3 == 0 && num2 % num3 != 0) {
+        printf("Memo");
+    }
+    else if(num1 % num3 != 0 && num2 % num3 == 0) {
+        printf("Momo");
+    }
+    else if(num1 % num3 == 0 && num2 % num3 == 0) {
+        printf("Both");
+    }
+    else {
+        printf("No One");
+    }
+
+    return 0;
+}
+```
+
+### 2.2.3. C: Next Alphabet:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/C
+
+```c
+#include <stdio.h>
+
+int main() {
+    char c;
+    scanf("%c", &c);
+
+
+    if(c == 'z'){
+        printf("a\n");
+    }
+    else{
+        printf("%c\n", c + 1);
+    }
+
+    return 0;
+}
+```
+
+### 2.2.4. D: Ali Baba and Puzzles:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/D
+
+```c
+#include <stdio.h>
+
+int main() {
+    long long int num1, num2, num3, num4;
+    scanf("%lld %lld %lld %lld", &num1, &num2, &num3, &num4);
+
+    if(num1 + num2 - num3 == num4){
+        printf("YES");
+    }
+    else if(num1 + num2 * num3 == num4){
+        printf("YES");
+    }
+    else if(num1 - num2 * num3 == num4){
+        printf("YES");
+    }
+    else if(num1 - num2 + num3 == num4){
+        printf("YES");
+    }
+    else if(num1 * num2 + num3 == num4){
+        printf("YES");
+    }
+    else if(num1 * num2 - num3 == num4){
+        printf("YES");
+    }
+    else{
+        printf("NO");
+    }
+
+    return 0;
+}
+```
+
+### 2.2.5. E: Interval Sweep:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/E
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    if (a + b == 0) {
+        printf("NO\n");
+        return 0;
+    }
+
+    int odd = 0, even = 0;
+
+    // Start with an odd number
+    for (int i = 1; i <= a + b; i++) {
+        if (i % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
+
+    if (odd == a && even == b) {
+        printf("YES\n");
+        return 0;
+    }
+
+    odd = 0;
+    even = 0;
+
+    // Start with an even number
+    for (int i = 2; i <= a + b + 1; i++) {
+        if (i % 2 == 0) {
+            even++;
+        } else {
+            odd++;
+        }
+    }
+
+    if (odd == a && even == b) {
+        printf("YES\n");
+    } else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+```
+
+### 2.2.6. F: Adding Bits: 
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/F
+
+```c
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+    scanf("%d %d", &num1, &num2);
+
+    int result = num1 ^ num2;
+    printf("%d", result);
+
+    return 0;
+}
+```
+Note: In XOR operation: 
+- If both bits are the same = 0
+- If bits are different = 1
+
+### 2.2.7. G: Katryoshka: (Hard)
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/G
+
+```c
+
+#include <stdio.h>
+
+int main() {
+    long long int eyes, mouths, bodies;
+    scanf("%lld %lld %lld", &eyes, &mouths, &bodies);
+
+    long long int number_of_katryoshkas = 0;
+
+    long long int min_value = eyes;
+
+    if (mouths < min_value) {
+        min_value = mouths;
+    }
+
+    if (bodies < min_value) {
+        min_value = bodies;
+    }
+
+    // Make Type 3 Katryoshkas
+    number_of_katryoshkas = min_value;
+
+    eyes -= min_value;
+    bodies -= min_value;
+
+    // Make Type 1 Katryoshkas
+    eyes /= 2;
+
+    if (eyes > bodies) {
+        eyes = bodies;
+    }
+
+    number_of_katryoshkas += eyes;
+
+    printf("%lld\n", number_of_katryoshkas);
+
+    return 0;
+}
+```
+
+### 2.2.8. H: Data Type Guessing:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/H
+
+```c
+#include <stdio.h>
+#include <limits.h>
+
+int main() {
+    long long n, k, a;
+    scanf("%lld %lld %lld", &n, &k, &a);
+
+    long long product = n * k;
+
+    if (product % a != 0) {
+        printf("double\n");
+    }
+    else {
+        long long result = product / a;
+
+        if (result >= INT_MIN && result <= INT_MAX) {
+            printf("int\n");
+        }
+        else {
+            printf("long long\n");
+        }
+    }
+
+    return 0;
+}
+```
+
+### 2.2.9. I: Lucky Numbers:
+https://codeforces.com/group/MWSDmqGsZm/contest/326175/problem/I
+
+```c 
+#include <stdio.h>
+
+int main() {
+    int num;
+    scanf("%d", &num);
+
+    int firstDigit = num / 10;
+    int lastDigit = num % 10;
+
+    if ((lastDigit != 0 && firstDigit % lastDigit == 0) || lastDigit % firstDigit == 0) {
+        printf("YES\n");
+    }
+    else {
+        printf("NO\n");
+    }
+
+    return 0;
+}
+```
+
+Note: In c: 
+```c
+// Modulo
+any_number % 0          // Undefined behavior or runtime error
+0 % any_nonzero_number  // 0
+
+// Division
+any_number / 0          // Undefined behavior or runtime error
+0 / any_nonzero_number  // 0
+```
+
 ## 2.3. Sheet 2 (Loops):
 ## 2.4. Contest 2:
 ## 2.5. Sheet 3 (Arrays):
