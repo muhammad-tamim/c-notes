@@ -90,7 +90,41 @@
     - [2.2.8. H: Data Type Guessing:](#228-h-data-type-guessing)
     - [2.2.9. I: Lucky Numbers:](#229-i-lucky-numbers)
   - [2.3. Sheet 2 (Loops):](#23-sheet-2-loops)
+    - [2.3.1. A. Problem Name: 1 to N](#231-a-problem-name-1-to-n)
+    - [2.3.2. B. Problem Name: Even Numbers](#232-b-problem-name-even-numbers)
+    - [2.3.3. C. Problem Name: Even, Odd, Positive and Negative](#233-c-problem-name-even-odd-positive-and-negative)
+    - [2.3.4. D. Problem Name: Fixed Password](#234-d-problem-name-fixed-password)
+    - [2.3.5. E. Problem Name: Max](#235-e-problem-name-max)
+    - [2.3.6. F. Problem Name: Multiplication Table](#236-f-problem-name-multiplication-table)
+    - [2.3.7. G. Problem Name: Factorial](#237-g-problem-name-factorial)
+    - [2.3.8. H. Problem Name: One Prime](#238-h-problem-name-one-prime)
+    - [2.3.9. I. Problem Name: Palindrome](#239-i-problem-name-palindrome)
+    - [2.3.10. J. Problem Name: Primes from 1 to N](#2310-j-problem-name-primes-from-1-to-n)
+    - [2.3.11. K. Problem Name: Divisors](#2311-k-problem-name-divisors)
+    - [2.3.12. L. Problem Name: GCD](#2312-l-problem-name-gcd)
+    - [2.3.13. M. Problem Name: Lucky Numbers](#2313-m-problem-name-lucky-numbers)
+    - [2.3.14. N. Problem Name: Numbers Histogram](#2314-n-problem-name-numbers-histogram)
+    - [2.3.15. O. Problem Name: Pyramid](#2315-o-problem-name-pyramid)
+    - [2.3.16. P. Problem Name: Shape1](#2316-p-problem-name-shape1)
+    - [2.3.17. Q. Problem Name: Digits](#2317-q-problem-name-digits)
+    - [2.3.18. R. Problem Name: Sequence of Numbers and Sum](#2318-r-problem-name-sequence-of-numbers-and-sum)
+    - [2.3.19. S. Problem Name: Sum of Consecutive Odd Numbers](#2319-s-problem-name-sum-of-consecutive-odd-numbers)
+    - [2.3.20. T. Problem Name: Shape2](#2320-t-problem-name-shape2)
+    - [2.3.21. U. Problem Name: Some Sums](#2321-u-problem-name-some-sums)
+    - [2.3.22. V. Problem Name: PUM](#2322-v-problem-name-pum)
+    - [2.3.23. W. Problem Name: Shape3](#2323-w-problem-name-shape3)
+    - [2.3.24. X. Problem Name: Convert To Decimal 2](#2324-x-problem-name-convert-to-decimal-2)
+    - [2.3.25. Y. Problem Name: Easy Fibonacci](#2325-y-problem-name-easy-fibonacci)
+    - [2.3.26. Z. Problem Name: Three Numbers](#2326-z-problem-name-three-numbers)
   - [2.4. Contest 2:](#24-contest-2)
+    - [2.4.1. A. Problem Name: Timon and Pumbaa](#241-a-problem-name-timon-and-pumbaa)
+    - [2.4.2. B. Problem Name: Drawing `X`](#242-b-problem-name-drawing-x)
+    - [2.4.3. C. Problem Name: Finding Minimums](#243-c-problem-name-finding-minimums)
+    - [2.4.4. D. Problem Name: Range Sum](#244-d-problem-name-range-sum)
+    - [2.4.5. E. Problem Name: Hady Rides the Train](#245-e-problem-name-hady-rides-the-train)
+    - [2.4.6. F. Problem Name: Break Number](#246-f-problem-name-break-number)
+    - [2.4.7. G. Problem Name: Construct the Sum](#247-g-problem-name-construct-the-sum)
+    - [2.4.8. H. Problem Name: Simple Mod](#248-h-problem-name-simple-mod)
   - [2.5. Patterns:](#25-patterns)
     - [2.5.1. Beginner:](#251-beginner)
       - [2.5.1.1. Square Fill Pattern](#2511-square-fill-pattern)
@@ -121,14 +155,218 @@
       - [2.5.3.6. Hollow Hourglass Pattern](#2536-hollow-hourglass-pattern)
       - [2.5.3.7. Pascal's Triangle](#2537-pascals-triangle)
   - [2.6. Sheet 3 (Arrays):](#26-sheet-3-arrays)
+    - [2.6.1. A. Problem Name: Summation](#261-a-problem-name-summation)
+    - [2.6.2. B. Problem Name: Searching](#262-b-problem-name-searching)
+    - [2.6.3. C. Problem Name: Replacement](#263-c-problem-name-replacement)
+    - [2.6.4. D. Problem Name: Positions in array](#264-d-problem-name-positions-in-array)
+    - [2.6.5. E. Problem Name: Lowest Number](#265-e-problem-name-lowest-number)
+    - [2.6.6. F. Problem Name: Reversing](#266-f-problem-name-reversing)
+    - [2.6.7. G. Problem Name: Palindrome Array](#267-g-problem-name-palindrome-array)
+    - [2.6.8. H. Problem Name: Sorting](#268-h-problem-name-sorting)
+    - [2.6.9. I. Problem Name: Smallest Pair](#269-i-problem-name-smallest-pair)
+    - [2.6.10. J. Problem Name: Lucky Array](#2610-j-problem-name-lucky-array)
+    - [2.6.11. K. Problem Name: Sum Digits](#2611-k-problem-name-sum-digits)
+    - [2.6.12. L. Problem Name: Max Subarray](#2612-l-problem-name-max-subarray)
+    - [2.6.13. M. Problem Name: Replace MinMax](#2613-m-problem-name-replace-minmax)
+    - [2.6.14. N. Problem Name: Check Code](#2614-n-problem-name-check-code)
+    - [2.6.15. O. Problem Name: Fibonacci](#2615-o-problem-name-fibonacci)
+    - [2.6.16. P. Problem Name: Minimize Number](#2616-p-problem-name-minimize-number)
+    - [2.6.17. Q. Problem Name: Count Subarrays](#2617-q-problem-name-count-subarrays)
+    - [2.6.18. R. Problem Name: Permutation with arrays](#2618-r-problem-name-permutation-with-arrays)
+    - [2.6.19. S. Problem Name: Search In Matrix](#2619-s-problem-name-search-in-matrix)
+    - [2.6.20. T. Problem Name: Matrix](#2620-t-problem-name-matrix)
+    - [2.6.21. U. Problem Name: Is B a subsequence of A ?](#2621-u-problem-name-is-b-a-subsequence-of-a-)
+    - [2.6.22. V. Problem Name: Frequency Array](#2622-v-problem-name-frequency-array)
+    - [2.6.23. W. Problem Name: Mirror Array](#2623-w-problem-name-mirror-array)
+    - [2.6.24. X. Problem Name: 8 Neighbors](#2624-x-problem-name-8-neighbors)
+    - [2.6.25. Y. Problem Name: Range sum query](#2625-y-problem-name-range-sum-query)
+    - [2.6.26. Z. Problem Name: Binary Search](#2626-z-problem-name-binary-search)
   - [2.7. Contest 3:](#27-contest-3)
-  - [2.8. Sheet 4 (Strings):1](#28-sheet-4-strings1)
+    - [2.7.1. A. Problem Name: Square or rectangle](#271-a-problem-name-square-or-rectangle)
+    - [2.7.2. B. Problem Name: Reversing](#272-b-problem-name-reversing)
+    - [2.7.3. C. Problem Name: Choose Elements](#273-c-problem-name-choose-elements)
+    - [2.7.4. D. Problem Name: Counting Elements](#274-d-problem-name-counting-elements)
+    - [2.7.5. E. Problem Name: Alternating Array](#275-e-problem-name-alternating-array)
+    - [2.7.6. F. Problem Name: Front - End](#276-f-problem-name-front---end)
+    - [2.7.7. G. Problem Name: Even Hate Odd](#277-g-problem-name-even-hate-odd)
+  - [2.8. Sheet 4 (Strings):](#28-sheet-4-strings)
+    - [2.8.1. A. Problem Name: Create A New String](#281-a-problem-name-create-a-new-string)
+    - [2.8.2. B. Problem Name: Let's use Getline](#282-b-problem-name-lets-use-getline)
+    - [2.8.3. C. Problem Name: Compare](#283-c-problem-name-compare)
+    - [2.8.4. D. Problem Name: Strings](#284-d-problem-name-strings)
+    - [2.8.5. E. Problem Name: Count](#285-e-problem-name-count)
+    - [2.8.6. F. Problem Name: Way Too Long Words](#286-f-problem-name-way-too-long-words)
+    - [2.8.7. G. Problem Name: Conversion](#287-g-problem-name-conversion)
+    - [2.8.8. H. Problem Name: Good or Bad](#288-h-problem-name-good-or-bad)
+    - [2.8.9. I. Problem Name: Palindrome](#289-i-problem-name-palindrome)
+    - [2.8.10. J. Problem Name: Count Letters](#2810-j-problem-name-count-letters)
+    - [2.8.11. K. Problem Name: I Love strings](#2811-k-problem-name-i-love-strings)
+    - [2.8.12. L. Problem Name: String Functions](#2812-l-problem-name-string-functions)
+    - [2.8.13. M. Problem Name: Subsequence String](#2813-m-problem-name-subsequence-string)
+    - [2.8.14. N. Problem Name: Max Subsequence](#2814-n-problem-name-max-subsequence)
+    - [2.8.15. O. Problem Name: Sort String](#2815-o-problem-name-sort-string)
+    - [2.8.16. P. Problem Name: Count Words](#2816-p-problem-name-count-words)
+    - [2.8.17. Q. Problem Name: Reverse Words](#2817-q-problem-name-reverse-words)
+    - [2.8.18. R. Problem Name: String Score](#2818-r-problem-name-string-score)
+    - [2.8.19. S. Problem Name: Max Split](#2819-s-problem-name-max-split)
+    - [2.8.20. T. Problem Name: URL](#2820-t-problem-name-url)
+    - [2.8.21. U. Problem Name: New Words](#2821-u-problem-name-new-words)
+    - [2.8.22. V. Problem Name: Replace Word](#2822-v-problem-name-replace-word)
+    - [2.8.23. W. Problem Name: Encrypt \& Decrypt Message](#2823-w-problem-name-encrypt--decrypt-message)
+    - [2.8.24. X. Problem Name: Comparison](#2824-x-problem-name-comparison)
+    - [2.8.25. Y. Problem Name: Min Cost String](#2825-y-problem-name-min-cost-string)
+    - [2.8.26. Z. Problem Name: Clean Code](#2826-z-problem-name-clean-code)
   - [2.9. Sheet 5 (Functions):](#29-sheet-5-functions)
+    - [2.9.1. A. Problem Name: Add](#291-a-problem-name-add)
+    - [2.9.2. B. Problem Name: Print](#292-b-problem-name-print)
+    - [2.9.3. C. Problem Name: Wonderful Number](#293-c-problem-name-wonderful-number)
+    - [2.9.4. D. Problem Name: Prime Function](#294-d-problem-name-prime-function)
+    - [2.9.5. E. Problem Name: Swap](#295-e-problem-name-swap)
+    - [2.9.6. F. Problem Name: Equation](#296-f-problem-name-equation)
+    - [2.9.7. G. Problem Name: Max and MIN](#297-g-problem-name-max-and-min)
+    - [2.9.8. H. Problem Name: N Times](#298-h-problem-name-n-times)
+    - [2.9.9. I. Problem Name: Swapping With Matrix](#299-i-problem-name-swapping-with-matrix)
+    - [2.9.10. J. Problem Name: Average](#2910-j-problem-name-average)
+    - [2.9.11. K. Problem Name: Shift Right](#2911-k-problem-name-shift-right)
+    - [2.9.12. L. Problem Name: New Array](#2912-l-problem-name-new-array)
+    - [2.9.13. M. Problem Name: Distinct Numbers](#2913-m-problem-name-distinct-numbers)
+    - [2.9.14. N. Problem Name: Shift Zeros](#2914-n-problem-name-shift-zeros)
+    - [2.9.15. O. Problem Name: Five in One](#2915-o-problem-name-five-in-one)
   - [2.10. Sheet 6 (Math - Geometry):](#210-sheet-6-math---geometry)
+    - [2.10.1. A. Problem Name: Power Of Two](#2101-a-problem-name-power-of-two)
+    - [2.10.2. B. Problem Name: Prime checking](#2102-b-problem-name-prime-checking)
+    - [2.10.3. C. Problem Name: Sum of Range](#2103-c-problem-name-sum-of-range)
+    - [2.10.4. D. Problem Name: Xor](#2104-d-problem-name-xor)
+    - [2.10.5. E. Problem Name: Maximum Distinct Numbers](#2105-e-problem-name-maximum-distinct-numbers)
+    - [2.10.6. F. Problem Name: Multiplication of Matrices](#2106-f-problem-name-multiplication-of-matrices)
+    - [2.10.7. G. Problem Name: Summation of its divisors](#2107-g-problem-name-summation-of-its-divisors)
+    - [2.10.8. H. Problem Name: GCD](#2108-h-problem-name-gcd)
+    - [2.10.9. I. Problem Name: Divisability](#2109-i-problem-name-divisability)
+    - [2.10.10. J. Problem Name: Prime Factors](#21010-j-problem-name-prime-factors)
+    - [2.10.11. K. Problem Name: Combination and Permutation](#21011-k-problem-name-combination-and-permutation)
+    - [2.10.12. L. Problem Name: Pascal Triangle](#21012-l-problem-name-pascal-triangle)
+    - [2.10.13. M. Problem Name: Divisible](#21013-m-problem-name-divisible)
+    - [2.10.14. N. Problem Name: Convert to Base](#21014-n-problem-name-convert-to-base)
+    - [2.10.15. O. Problem Name: Big Add and Multiply](#21015-o-problem-name-big-add-and-multiply)
+    - [2.10.16. P. Problem Name: Factorial Digits](#21016-p-problem-name-factorial-digits)
+    - [2.10.17. Q. Problem Name: Product](#21017-q-problem-name-product)
+    - [2.10.18. R. Problem Name: Distance points](#21018-r-problem-name-distance-points)
+    - [2.10.19. S. Problem Name: Is Triangle](#21019-s-problem-name-is-triangle)
+    - [2.10.20. T. Problem Name: Circle Task](#21020-t-problem-name-circle-task)
+    - [2.10.21. U. Problem Name: Straight Line](#21021-u-problem-name-straight-line)
+    - [2.10.22. V. Problem Name: Two Lines](#21022-v-problem-name-two-lines)
+    - [2.10.23. W. Problem Name: Circles](#21023-w-problem-name-circles)
+    - [2.10.24. X. Problem Name: Rectangle](#21024-x-problem-name-rectangle)
+    - [2.10.25. Y. Problem Name: Common Area](#21025-y-problem-name-common-area)
+    - [2.10.26. Z. Problem Name: Geometry Test](#21026-z-problem-name-geometry-test)
   - [2.11. Sheet 7 (Recursion):](#211-sheet-7-recursion)
+    - [2.11.1. A. Problem Name: Print Recursion](#2111-a-problem-name-print-recursion)
+    - [2.11.2. B. Problem Name: Print from 1 to N](#2112-b-problem-name-print-from-1-to-n)
+    - [2.11.3. C. Problem Name: Print from N to 1](#2113-c-problem-name-print-from-n-to-1)
+    - [2.11.4. D. Problem Name: Print Digits using Recursion](#2114-d-problem-name-print-digits-using-recursion)
+    - [2.11.5. E. Problem Name: Base Converssion](#2115-e-problem-name-base-converssion)
+    - [2.11.6. F. Problem Name: Print Even Indices](#2116-f-problem-name-print-even-indices)
+    - [2.11.7. G. Problem Name: Pyramid](#2117-g-problem-name-pyramid)
+    - [2.11.8. H. Problem Name: Inverted Pyramid](#2118-h-problem-name-inverted-pyramid)
+    - [2.11.9. I. Problem Name: Count Vowels](#2119-i-problem-name-count-vowels)
+    - [2.11.10. J. Problem Name: Factorial](#21110-j-problem-name-factorial)
+    - [2.11.11. K. Problem Name: Max Number](#21111-k-problem-name-max-number)
+    - [2.11.12. L. Problem Name: Summation](#21112-l-problem-name-summation)
+    - [2.11.13. M. Problem Name: Suffix Sum](#21113-m-problem-name-suffix-sum)
+    - [2.11.14. N. Problem Name: Sum of a Matrix](#21114-n-problem-name-sum-of-a-matrix)
+    - [2.11.15. O. Problem Name: Fibonacci](#21115-o-problem-name-fibonacci)
+    - [2.11.16. P. Problem Name: Log2](#21116-p-problem-name-log2)
+    - [2.11.17. Q. Problem Name: 3n + 1 sequence](#21117-q-problem-name-3n--1-sequence)
+    - [2.11.18. R. Problem Name: Palindrome Array](#21118-r-problem-name-palindrome-array)
+    - [2.11.19. S. Problem Name: Array Average](#21119-s-problem-name-array-average)
+    - [2.11.20. T. Problem Name: Combination](#21120-t-problem-name-combination)
+    - [2.11.21. U. Problem Name: Knapsack](#21121-u-problem-name-knapsack)
+    - [2.11.22. V. Problem Name: Creating Expression1](#21122-v-problem-name-creating-expression1)
+    - [2.11.23. W. Problem Name: Reach Value](#21123-w-problem-name-reach-value)
+    - [2.11.24. X. Problem Name: The maximum path-sum](#21124-x-problem-name-the-maximum-path-sum)
+    - [2.11.25. Y. Problem Name: Number of Ways](#21125-y-problem-name-number-of-ways)
+    - [2.11.26. Z. Problem Name: Left Max](#21126-z-problem-name-left-max)
   - [2.12. Sheet 8 (General easy):](#212-sheet-8-general-easy)
+    - [2.12.1. A Palindromes Replace:](#2121-a-palindromes-replace)
+    - [2.12.2. B Watermelon:](#2122-b-watermelon)
+    - [2.12.3. C Koko And The Transformation:](#2123-c-koko-and-the-transformation)
+    - [2.12.4. D Bear and Big Brother:](#2124-d-bear-and-big-brother)
+    - [2.12.5. E George and Accommodation:](#2125-e-george-and-accommodation)
+    - [2.12.6. F Fox And Snake:](#2126-f-fox-and-snake)
+    - [2.12.7. G Magnets:](#2127-g-magnets)
+    - [2.12.8. H Presents:](#2128-h-presents)
+    - [2.12.9. I Colorful Stones (Simplified Edition)1:](#2129-i-colorful-stones-simplified-edition1)
+    - [2.12.10. J Lucky Division:](#21210-j-lucky-division)
+    - [2.12.11. K Prime Fibonacci:](#21211-k-prime-fibonacci)
+    - [2.12.12. L Sereja and Dima:](#21212-l-sereja-and-dima)
+    - [2.12.13. M The New Year: Meeting Friends:](#21213-m-the-new-year-meeting-friends)
+    - [2.12.14. N Cakeminator:](#21214-n-cakeminator)
+    - [2.12.15. O Free Ice Cream:](#21215-o-free-ice-cream)
+    - [2.12.16. P Police Recruits:](#21216-p-police-recruits)
+    - [2.12.17. Q Night at the Museum:](#21217-q-night-at-the-museum)
+    - [2.12.18. R Arrival of the General:](#21218-r-arrival-of-the-general)
+    - [2.12.19. S Good Number:](#21219-s-good-number)
+    - [2.12.20. T Helpful Maths:](#21220-t-helpful-maths)
+    - [2.12.21. U Ilya and Bank Account1:](#21221-u-ilya-and-bank-account1)
+    - [2.12.22. V Is it rated:](#21222-v-is-it-rated)
+    - [2.12.23. W Mahmoud and Longest Uncommon Subsequence:](#21223-w-mahmoud-and-longest-uncommon-subsequence)
+    - [2.12.24. X Panoramix's Prediction:](#21224-x-panoramixs-prediction)
+    - [2.12.25. Y Team Olympiad:](#21225-y-team-olympiad)
+    - [2.12.26. Z Decoding:](#21226-z-decoding)
   - [2.13. Sheet 9 (General medium):](#213-sheet-9-general-medium)
+    - [2.13.1. A. Problem Name: Drawing Task](#2131-a-problem-name-drawing-task)
+    - [2.13.2. B. Problem Name: Arpa’s hard exam and Mehrdad’s naive cheat](#2132-b-problem-name-arpas-hard-exam-and-mehrdads-naive-cheat)
+    - [2.13.3. C. Problem Name: Dragons1](#2133-c-problem-name-dragons1)
+    - [2.13.4. D. Problem Name: Juicer](#2134-d-problem-name-juicer)
+    - [2.13.5. E. Problem Name: Keyboard](#2135-e-problem-name-keyboard)
+    - [2.13.6. F. Problem Name: Puzzles1](#2136-f-problem-name-puzzles1)
+    - [2.13.7. G. Problem Name: Twins1](#2137-g-problem-name-twins1)
+    - [2.13.8. H. Problem Name: Launch of Collider](#2138-h-problem-name-launch-of-collider)
+    - [2.13.9. I. Problem Name: Lineland Mail](#2139-i-problem-name-lineland-mail)
+    - [2.13.10. J. Problem Name: Shaass and Oskols1](#21310-j-problem-name-shaass-and-oskols1)
+    - [2.13.11. K. Problem Name: Stars Drawing (Easy Edition)](#21311-k-problem-name-stars-drawing-easy-edition)
+    - [2.13.12. L. Problem Name: Announcement !](#21312-l-problem-name-announcement-)
+    - [2.13.13. M. Problem Name: !Palindromes](#21313-m-problem-name-palindromes)
+    - [2.13.14. N. Problem Name: Pumbaa And Apples](#21314-n-problem-name-pumbaa-and-apples)
+    - [2.13.15. O. Problem Name: Yaroslav and Permutations1](#21315-o-problem-name-yaroslav-and-permutations1)
+    - [2.13.16. P. Problem Name: Calculating Function](#21316-p-problem-name-calculating-function)
+    - [2.13.17. Q. Problem Name: Dreamoon and Stairs](#21317-q-problem-name-dreamoon-and-stairs)
+    - [2.13.18. R. Problem Name: Ksenia and Pan Scales](#21318-r-problem-name-ksenia-and-pan-scales)
+    - [2.13.19. S. Problem Name: Mahmoud and a Triangle](#21319-s-problem-name-mahmoud-and-a-triangle)
+    - [2.13.20. T. Problem Name: Olesya and Rodion](#21320-t-problem-name-olesya-and-rodion)
+    - [2.13.21. U. Problem Name: T-primes1](#21321-u-problem-name-t-primes1)
+    - [2.13.22. V. Problem Name: Balanced Rating Changes](#21322-v-problem-name-balanced-rating-changes)
+    - [2.13.23. W. Problem Name: Football1](#21323-w-problem-name-football1)
+    - [2.13.24. X. Problem Name: Mountain Scenery1](#21324-x-problem-name-mountain-scenery1)
+    - [2.13.25. Y. Problem Name: Polo the Penguin and Segments 1](#21325-y-problem-name-polo-the-penguin-and-segments-1)
+    - [2.13.26. Z. Problem Name: Fraction](#21326-z-problem-name-fraction)
   - [2.14. Sheet 10 (General Hard):](#214-sheet-10-general-hard)
+    - [2.14.1. A. Problem Name: Palindromes Replace](#2141-a-problem-name-palindromes-replace)
+    - [2.14.2. B. Problem Name: Delete from the Left](#2142-b-problem-name-delete-from-the-left)
+    - [2.14.3. C. Problem Name: Koko And The Transformation](#2143-c-problem-name-koko-and-the-transformation)
+    - [2.14.4. D. Problem Name: Hussien and Strings](#2144-d-problem-name-hussien-and-strings)
+    - [2.14.5. E. Problem Name: Construct The Sum](#2145-e-problem-name-construct-the-sum)
+    - [2.14.6. F. Problem Name: Marks](#2146-f-problem-name-marks)
+    - [2.14.7. G. Problem Name: Smallest Product](#2147-g-problem-name-smallest-product)
+    - [2.14.8. H. Problem Name: Chewbaсca and Number](#2148-h-problem-name-chewbaсca-and-number)
+    - [2.14.9. I. Problem Name: Coins1](#2149-i-problem-name-coins1)
+    - [2.14.10. J. Problem Name: Help Vasilisa the Wise 21](#21410-j-problem-name-help-vasilisa-the-wise-21)
+    - [2.14.11. K. Problem Name: Snacktower](#21411-k-problem-name-snacktower)
+    - [2.14.12. L. Problem Name: Two Squares](#21412-l-problem-name-two-squares)
+    - [2.14.13. M. Problem Name: Postcard](#21413-m-problem-name-postcard)
+    - [2.14.14. N. Problem Name: Katryoshka](#21414-n-problem-name-katryoshka)
+    - [2.14.15. O. Problem Name: Help Koko](#21415-o-problem-name-help-koko)
+    - [2.14.16. P. Problem Name: No Time for Dragons](#21416-p-problem-name-no-time-for-dragons)
+    - [2.14.17. Q. Problem Name: Bulbs](#21417-q-problem-name-bulbs)
+    - [2.14.18. R. Problem Name: Cut Ribbon](#21418-r-problem-name-cut-ribbon)
+    - [2.14.19. S. Problem Name: DZY Loves Chessboard](#21419-s-problem-name-dzy-loves-chessboard)
+    - [2.14.20. T. Problem Name: Easter Eggs1](#21420-t-problem-name-easter-eggs1)
+    - [2.14.21. U. Problem Name: From S To T](#21421-u-problem-name-from-s-to-t)
+    - [2.14.22. V. Problem Name: New Password](#21422-v-problem-name-new-password)
+    - [2.14.23. W. Problem Name: Hussien and Arrays 2](#21423-w-problem-name-hussien-and-arrays-2)
+    - [2.14.24. X. Problem Name: Strange Addition1](#21424-x-problem-name-strange-addition1)
+    - [2.14.25. Y. Problem Name: Spiral](#21425-y-problem-name-spiral)
+    - [2.14.26. Z. Problem Name: Triangle1](#21426-z-problem-name-triangle1)
 
 # 1. Part 1: Language
 ## 1.1. Chapter 1: Basic Syntax, Variables and Data Types:
@@ -3192,7 +3430,144 @@ any_number / 0          // Undefined behavior or runtime error
 ```
 
 ## 2.3. Sheet 2 (Loops):
+### 2.3.1. A. Problem Name: 1 to N
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/A
+
+### 2.3.2. B. Problem Name: Even Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/B
+
+### 2.3.3. C. Problem Name: Even, Odd, Positive and Negative
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/C
+
+### 2.3.4. D. Problem Name: Fixed Password
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/D
+
+### 2.3.5. E. Problem Name: Max
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/E
+
+### 2.3.6. F. Problem Name: Multiplication Table
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/F
+
+### 2.3.7. G. Problem Name: Factorial
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/G
+
+### 2.3.8. H. Problem Name: One Prime
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/H
+
+### 2.3.9. I. Problem Name: Palindrome
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/I
+
+### 2.3.10. J. Problem Name: Primes from 1 to N
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/J
+
+### 2.3.11. K. Problem Name: Divisors
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/K
+
+### 2.3.12. L. Problem Name: GCD
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/L
+
+### 2.3.13. M. Problem Name: Lucky Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/M
+
+### 2.3.14. N. Problem Name: Numbers Histogram
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/N
+
+### 2.3.15. O. Problem Name: Pyramid
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/O
+
+### 2.3.16. P. Problem Name: Shape1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/P
+
+### 2.3.17. Q. Problem Name: Digits
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Q
+
+### 2.3.18. R. Problem Name: Sequence of Numbers and Sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/R
+
+### 2.3.19. S. Problem Name: Sum of Consecutive Odd Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
+
+### 2.3.20. T. Problem Name: Shape2
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/T
+
+### 2.3.21. U. Problem Name: Some Sums
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/U
+
+### 2.3.22. V. Problem Name: PUM
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/V
+
+### 2.3.23. W. Problem Name: Shape3
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/W
+
+### 2.3.24. X. Problem Name: Convert To Decimal 2
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/X
+
+### 2.3.25. Y. Problem Name: Easy Fibonacci
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Y
+
+### 2.3.26. Z. Problem Name: Three Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/Z
+
 ## 2.4. Contest 2:
+### 2.4.1. A. Problem Name: Timon and Pumbaa
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/A
+
+### 2.4.2. B. Problem Name: Drawing `X`
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/B
+
+### 2.4.3. C. Problem Name: Finding Minimums
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/C
+
+### 2.4.4. D. Problem Name: Range Sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/D
+
+### 2.4.5. E. Problem Name: Hady Rides the Train
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/E
+
+### 2.4.6. F. Problem Name: Break Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/F
+
+### 2.4.7. G. Problem Name: Construct the Sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/G
+
+### 2.4.8. H. Problem Name: Simple Mod
+
+https://codeforces.com/group/MWSDmqGsZm/contest/326907/problem/H
+
+
 ## 2.5. Patterns: 
 ![Patterns](./images/Pattern-Printing-in-c.jpg)
 
@@ -4005,11 +4380,780 @@ int main() {
 
 
 ## 2.6. Sheet 3 (Arrays):
+### 2.6.1. A. Problem Name: Summation
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/A
+
+### 2.6.2. B. Problem Name: Searching
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/B
+
+### 2.6.3. C. Problem Name: Replacement
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/C
+
+### 2.6.4. D. Problem Name: Positions in array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/D
+
+### 2.6.5. E. Problem Name: Lowest Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/E
+
+### 2.6.6. F. Problem Name: Reversing
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/F
+
+### 2.6.7. G. Problem Name: Palindrome Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/G
+
+### 2.6.8. H. Problem Name: Sorting
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/H
+
+### 2.6.9. I. Problem Name: Smallest Pair
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/I
+
+### 2.6.10. J. Problem Name: Lucky Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/J
+
+### 2.6.11. K. Problem Name: Sum Digits
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/K
+
+### 2.6.12. L. Problem Name: Max Subarray
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/L
+
+### 2.6.13. M. Problem Name: Replace MinMax
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/M
+
+### 2.6.14. N. Problem Name: Check Code
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/N
+
+### 2.6.15. O. Problem Name: Fibonacci
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/O
+
+### 2.6.16. P. Problem Name: Minimize Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/P
+
+### 2.6.17. Q. Problem Name: Count Subarrays
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Q
+
+### 2.6.18. R. Problem Name: Permutation with arrays
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/R
+
+### 2.6.19. S. Problem Name: Search In Matrix
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S
+
+### 2.6.20. T. Problem Name: Matrix
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/T
+
+### 2.6.21. U. Problem Name: Is B a subsequence of A ?
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/U
+
+### 2.6.22. V. Problem Name: Frequency Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/V
+
+### 2.6.23. W. Problem Name: Mirror Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/W
+
+### 2.6.24. X. Problem Name: 8 Neighbors
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/X
+
+### 2.6.25. Y. Problem Name: Range sum query
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Y
+
+### 2.6.26. Z. Problem Name: Binary Search
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Z
+
 ## 2.7. Contest 3:
-## 2.8. Sheet 4 (Strings):1
+### 2.7.1. A. Problem Name: Square or rectangle
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/A
+
+### 2.7.2. B. Problem Name: Reversing
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/B
+
+### 2.7.3. C. Problem Name: Choose Elements
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/C
+
+### 2.7.4. D. Problem Name: Counting Elements
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/D
+
+### 2.7.5. E. Problem Name: Alternating Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/E
+
+### 2.7.6. F. Problem Name: Front - End
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/F
+
+### 2.7.7. G. Problem Name: Even Hate Odd
+
+https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/G
+
+## 2.8. Sheet 4 (Strings):
+### 2.8.1. A. Problem Name: Create A New String
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/A
+
+### 2.8.2. B. Problem Name: Let's use Getline
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/B
+
+### 2.8.3. C. Problem Name: Compare
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/C
+
+### 2.8.4. D. Problem Name: Strings
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/D
+
+### 2.8.5. E. Problem Name: Count
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/E
+
+### 2.8.6. F. Problem Name: Way Too Long Words
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/F
+
+### 2.8.7. G. Problem Name: Conversion
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/G
+
+### 2.8.8. H. Problem Name: Good or Bad
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/H
+
+### 2.8.9. I. Problem Name: Palindrome
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/I
+
+### 2.8.10. J. Problem Name: Count Letters
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J
+
+### 2.8.11. K. Problem Name: I Love strings
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/K
+
+### 2.8.12. L. Problem Name: String Functions
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/L
+
+### 2.8.13. M. Problem Name: Subsequence String
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/M
+
+### 2.8.14. N. Problem Name: Max Subsequence
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/N
+
+### 2.8.15. O. Problem Name: Sort String
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/O
+
+### 2.8.16. P. Problem Name: Count Words
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/P
+
+### 2.8.17. Q. Problem Name: Reverse Words
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Q
+
+### 2.8.18. R. Problem Name: String Score
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/R
+
+### 2.8.19. S. Problem Name: Max Split
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/S
+
+### 2.8.20. T. Problem Name: URL
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/T
+
+### 2.8.21. U. Problem Name: New Words
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/U
+
+### 2.8.22. V. Problem Name: Replace Word
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/V
+
+### 2.8.23. W. Problem Name: Encrypt & Decrypt Message
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/W
+
+### 2.8.24. X. Problem Name: Comparison
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/X
+
+### 2.8.25. Y. Problem Name: Min Cost String
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Y
+
+### 2.8.26. Z. Problem Name: Clean Code
+
+https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Z
+
 ## 2.9. Sheet 5 (Functions):
+
+### 2.9.1. A. Problem Name: Add
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/A
+
+### 2.9.2. B. Problem Name: Print
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/B
+
+### 2.9.3. C. Problem Name: Wonderful Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/C
+
+### 2.9.4. D. Problem Name: Prime Function
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/D
+
+### 2.9.5. E. Problem Name: Swap
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E
+
+### 2.9.6. F. Problem Name: Equation
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/F
+
+### 2.9.7. G. Problem Name: Max and MIN
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G
+
+### 2.9.8. H. Problem Name: N Times
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/H
+
+### 2.9.9. I. Problem Name: Swapping With Matrix
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/I
+
+### 2.9.10. J. Problem Name: Average
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/J
+
+### 2.9.11. K. Problem Name: Shift Right
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/K
+
+### 2.9.12. L. Problem Name: New Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/L
+
+### 2.9.13. M. Problem Name: Distinct Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/M
+
+### 2.9.14. N. Problem Name: Shift Zeros
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/N
+
+### 2.9.15. O. Problem Name: Five in One
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/O
+
 ## 2.10. Sheet 6 (Math - Geometry): 
+### 2.10.1. A. Problem Name: Power Of Two
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/A
+
+### 2.10.2. B. Problem Name: Prime checking
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/B
+
+### 2.10.3. C. Problem Name: Sum of Range
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/C
+
+### 2.10.4. D. Problem Name: Xor
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/D
+
+### 2.10.5. E. Problem Name: Maximum Distinct Numbers
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/E
+
+### 2.10.6. F. Problem Name: Multiplication of Matrices
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/F
+
+### 2.10.7. G. Problem Name: Summation of its divisors
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/G
+
+### 2.10.8. H. Problem Name: GCD
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/H
+
+### 2.10.9. I. Problem Name: Divisability
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/I
+
+### 2.10.10. J. Problem Name: Prime Factors
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/J
+
+### 2.10.11. K. Problem Name: Combination and Permutation
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/K
+
+### 2.10.12. L. Problem Name: Pascal Triangle
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/L
+
+### 2.10.13. M. Problem Name: Divisible
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/M
+
+### 2.10.14. N. Problem Name: Convert to Base
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/N
+
+### 2.10.15. O. Problem Name: Big Add and Multiply
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/O
+
+### 2.10.16. P. Problem Name: Factorial Digits
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/P
+
+### 2.10.17. Q. Problem Name: Product
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Q
+
+### 2.10.18. R. Problem Name: Distance points
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/R
+
+### 2.10.19. S. Problem Name: Is Triangle
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/S
+
+### 2.10.20. T. Problem Name: Circle Task
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/T
+
+### 2.10.21. U. Problem Name: Straight Line
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/U
+
+### 2.10.22. V. Problem Name: Two Lines
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/V
+
+### 2.10.23. W. Problem Name: Circles
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/W
+
+### 2.10.24. X. Problem Name: Rectangle
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/X
+
+### 2.10.25. Y. Problem Name: Common Area
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Y
+
+### 2.10.26. Z. Problem Name: Geometry Test
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Z
+
 ## 2.11. Sheet 7 (Recursion): 
+### 2.11.1. A. Problem Name: Print Recursion
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/A
+
+### 2.11.2. B. Problem Name: Print from 1 to N
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/B
+
+### 2.11.3. C. Problem Name: Print from N to 1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/C
+
+### 2.11.4. D. Problem Name: Print Digits using Recursion
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/D
+
+### 2.11.5. E. Problem Name: Base Converssion
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/E
+
+### 2.11.6. F. Problem Name: Print Even Indices
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/F
+
+### 2.11.7. G. Problem Name: Pyramid
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/G
+
+### 2.11.8. H. Problem Name: Inverted Pyramid
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/H
+
+### 2.11.9. I. Problem Name: Count Vowels
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/I
+
+### 2.11.10. J. Problem Name: Factorial
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/J
+
+### 2.11.11. K. Problem Name: Max Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/K
+
+### 2.11.12. L. Problem Name: Summation
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/L
+
+### 2.11.13. M. Problem Name: Suffix Sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/M
+
+### 2.11.14. N. Problem Name: Sum of a Matrix
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/N
+
+### 2.11.15. O. Problem Name: Fibonacci
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/O
+
+### 2.11.16. P. Problem Name: Log2
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/P
+
+### 2.11.17. Q. Problem Name: 3n + 1 sequence
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Q
+
+### 2.11.18. R. Problem Name: Palindrome Array
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/R
+
+### 2.11.19. S. Problem Name: Array Average
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/S
+
+### 2.11.20. T. Problem Name: Combination
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/T
+
+### 2.11.21. U. Problem Name: Knapsack
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/U
+
+### 2.11.22. V. Problem Name: Creating Expression1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/V
+
+### 2.11.23. W. Problem Name: Reach Value
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/W
+
+### 2.11.24. X. Problem Name: The maximum path-sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/X
+
+### 2.11.25. Y. Problem Name: Number of Ways
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Y
+
+### 2.11.26. Z. Problem Name: Left Max
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Z
+
 ## 2.12. Sheet 8 (General easy): 
+### 2.12.1. A Palindromes Replace:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/A
+
+### 2.12.2. B Watermelon:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/B
+
+### 2.12.3. C Koko And The Transformation:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/C
+### 2.12.4. D Bear and Big Brother: 
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/D
+
+### 2.12.5. E George and Accommodation: 
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/E
+
+### 2.12.6. F Fox And Snake:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/F
+### 2.12.7. G Magnets:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/G
+### 2.12.8. H Presents:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/H
+### 2.12.9. I Colorful Stones (Simplified Edition)1:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/I
+### 2.12.10. J Lucky Division:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/J
+### 2.12.11. K Prime Fibonacci:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/K
+### 2.12.12. L Sereja and Dima:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/L
+### 2.12.13. M The New Year: Meeting Friends:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/M
+### 2.12.14. N Cakeminator:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/N
+### 2.12.15. O Free Ice Cream:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/O
+### 2.12.16. P Police Recruits:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/P
+### 2.12.17. Q Night at the Museum:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Q
+### 2.12.18. R Arrival of the General:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/R
+### 2.12.19. S Good Number:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/S
+### 2.12.20. T Helpful Maths:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/T
+### 2.12.21. U Ilya and Bank Account1:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/U
+### 2.12.22. V Is it rated:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/V
+### 2.12.23. W Mahmoud and Longest Uncommon Subsequence:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/W
+### 2.12.24. X Panoramix's Prediction:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/X
+### 2.12.25. Y Team Olympiad:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Y
+### 2.12.26. Z Decoding:
+https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Z
+
 ## 2.13. Sheet 9 (General medium): 
+### 2.13.1. A. Problem Name: Drawing Task
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/A
+
+### 2.13.2. B. Problem Name: Arpa’s hard exam and Mehrdad’s naive cheat
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/B
+
+### 2.13.3. C. Problem Name: Dragons1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/C
+
+### 2.13.4. D. Problem Name: Juicer
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/D
+
+### 2.13.5. E. Problem Name: Keyboard
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/E
+
+### 2.13.6. F. Problem Name: Puzzles1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/F
+
+### 2.13.7. G. Problem Name: Twins1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/G
+
+### 2.13.8. H. Problem Name: Launch of Collider
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/H
+
+### 2.13.9. I. Problem Name: Lineland Mail
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/I
+
+### 2.13.10. J. Problem Name: Shaass and Oskols1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/J
+
+### 2.13.11. K. Problem Name: Stars Drawing (Easy Edition)
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/K
+
+### 2.13.12. L. Problem Name: Announcement !
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/L
+
+### 2.13.13. M. Problem Name: !Palindromes
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/M
+
+### 2.13.14. N. Problem Name: Pumbaa And Apples
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/N
+
+### 2.13.15. O. Problem Name: Yaroslav and Permutations1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/O
+
+### 2.13.16. P. Problem Name: Calculating Function
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/P
+
+### 2.13.17. Q. Problem Name: Dreamoon and Stairs
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/Q
+
+### 2.13.18. R. Problem Name: Ksenia and Pan Scales
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/R
+
+### 2.13.19. S. Problem Name: Mahmoud and a Triangle
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/S
+
+### 2.13.20. T. Problem Name: Olesya and Rodion
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/T
+
+### 2.13.21. U. Problem Name: T-primes1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/U
+
+### 2.13.22. V. Problem Name: Balanced Rating Changes
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/V
+
+### 2.13.23. W. Problem Name: Football1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/W
+
+### 2.13.24. X. Problem Name: Mountain Scenery1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/X
+
+### 2.13.25. Y. Problem Name: Polo the Penguin and Segments 1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/Y
+
+### 2.13.26. Z. Problem Name: Fraction
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223207/problem/Z
+
 ## 2.14. Sheet 10 (General Hard): 
+### 2.14.1. A. Problem Name: Palindromes Replace
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/A
+
+### 2.14.2. B. Problem Name: Delete from the Left
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/B
+
+### 2.14.3. C. Problem Name: Koko And The Transformation
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/C
+
+### 2.14.4. D. Problem Name: Hussien and Strings
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/D
+
+### 2.14.5. E. Problem Name: Construct The Sum
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/E
+
+### 2.14.6. F. Problem Name: Marks
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/F
+
+### 2.14.7. G. Problem Name: Smallest Product
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/G
+
+### 2.14.8. H. Problem Name: Chewbaсca and Number
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/H
+
+### 2.14.9. I. Problem Name: Coins1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/I
+
+### 2.14.10. J. Problem Name: Help Vasilisa the Wise 21
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/J
+
+### 2.14.11. K. Problem Name: Snacktower
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/K
+
+### 2.14.12. L. Problem Name: Two Squares
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/L
+
+### 2.14.13. M. Problem Name: Postcard
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/M
+
+### 2.14.14. N. Problem Name: Katryoshka
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/N
+
+### 2.14.15. O. Problem Name: Help Koko
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/O
+
+### 2.14.16. P. Problem Name: No Time for Dragons
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/P
+
+### 2.14.17. Q. Problem Name: Bulbs
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/Q
+
+### 2.14.18. R. Problem Name: Cut Ribbon
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/R
+
+### 2.14.19. S. Problem Name: DZY Loves Chessboard
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/S
+
+### 2.14.20. T. Problem Name: Easter Eggs1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/T
+
+### 2.14.21. U. Problem Name: From S To T
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/U
+
+### 2.14.22. V. Problem Name: New Password
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/V
+
+### 2.14.23. W. Problem Name: Hussien and Arrays 2
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/W
+
+### 2.14.24. X. Problem Name: Strange Addition1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/X
+
+### 2.14.25. Y. Problem Name: Spiral
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/Y
+
+### 2.14.26. Z. Problem Name: Triangle1
+
+https://codeforces.com/group/MWSDmqGsZm/contest/223340/problem/Z
